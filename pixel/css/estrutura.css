@@ -1,0 +1,15 @@
+/* 
+    Document   : estrutura
+    Created on : 05/01/2013, 00:36:14
+    Author     : Tadeu
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+*{
+    list-style: none;
+}
+
+body{
+    background-color: #EEE;
+}

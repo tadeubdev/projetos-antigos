@@ -1,0 +1,338 @@
+
+	@media print
+	{
+
+		.collum-8 { width: 100% !important; }
+
+	}
+
+	#sidebar { display:none !important; }
+
+	#body { padding:0; }
+
+	.container
+	{
+		width: 100%;
+	}
+
+	#buttons
+	{
+
+		.btn
+		{
+			display: block;
+			width: 100%;
+			margin: 10px auto;
+			text-align: left;
+		}
+	}
+
+	#webcam
+	{
+		padding: 30px;
+
+		canvas
+		{
+			width: 300px;
+			height: 250px;
+			display: block;
+			margin: 0 auto;
+			border-radius: 10px;
+		}
+	}
+
+	.form
+	{
+		width: 300px;
+		margin: 15px auto;
+
+		h4 { margin:0; }
+	}
+
+	.collum-8
+	{
+		padding: 0 1em;
+	}
+
+	#cameraId { display:none; }
+
+	//////
+
+	#card-members
+	{
+		width: 566.7px;
+		height: 10.5cm !important;
+		padding: 2px;
+		float: left;
+		background-size: cover;
+
+		strong
+		{
+			padding-right: .3em;
+		}
+	}
+
+	#card-members-top
+	{
+		padding: 20px 10px;
+		margin: 5px;
+		background: rgba( white, .8 );
+
+		img
+		{
+			width: 40px;
+			height: 40px;
+			margin: 10px;
+			margin-left: 22px;
+			float: left;
+		}
+
+		div
+		{
+			margin: 0;
+			font-size: 22px;
+			font-weight: bold;
+			text-align: center;
+			color: #333;
+
+			small
+			{
+				display: block;
+				color: #555;
+			}
+		}
+
+		h4
+		{
+			margin: 0;
+			font-size: 20px;
+			text-align: center;
+			color: #1A8C5A;
+		}
+	}
+
+	#card-members-middle
+	{
+		font-weight: bolder;
+		text-align: center;
+
+		* { color:#FFF !important; }
+
+		#card-members-middle-name
+		{
+			min-height: 128px;
+			padding: 0 10px;
+			padding-top: 21px;
+			margin: 5px;
+			font-size: 31px;
+		}
+
+		#card-members-middle-credential
+		{
+			font-size: 23px;
+
+		}
+
+		#card-members-middle-bottom
+		{
+			padding: 0 40px;
+			margin: 30px 0 7px 0;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+
+	//////
+
+	#card-minister,
+	#card-deacon
+	{
+		width: 566.7px;
+		height: 10.5cm !important;
+		padding: 2px;
+		float: left;
+		background-size: cover;
+
+		strong
+		{
+			padding-right: .3em;
+		}
+	}
+
+	.card-minister-right
+	{
+
+		.card-minister-top
+		{
+			padding: 15px 5px;
+		}
+	}
+
+	#card-deacon .card-minister-top
+	{
+		div h4 { color:darken( #3C30CD, 10% ); }
+	}
+
+	#card-minister .card-minister-top
+	{
+		div h4 { color:darken( #D6361F, 10% ); }
+	}
+
+	.card-minister-top
+	{
+		width: 100%;
+		padding: 10px 5px;
+		background: rgba( white, .8 );
+
+		.collum-9
+		{
+			width: 74.8% !important;
+		}
+
+		img
+		{
+			width: 60px !important;
+			height: 60px;
+			margin: 10px;
+			margin-left: 40px;
+			float: left;
+		}
+
+		div
+		{
+
+			div
+			{
+				margin: 0;
+				font-size: 23px;
+				font-weight: bolder;
+				text-align: center;
+				text-transform: uppercase;
+				color: #333;
+
+				small
+				{
+					display: block;
+					text-transform: capitalize;
+					color: #555;
+				}
+			}
+
+			h4
+			{
+				margin: 0;
+				font-size: 20px;
+				text-align: center;
+			}
+
+			span
+			{
+				display: block;
+				text-align: center;
+				font-size: 11px;
+				color: #666;
+			}
+		}
+	}
+
+	.card-minister-middle
+	{
+		margin-top: 4px;
+
+		.collum-3
+		{
+			width: 4cm !important;
+			height: 5.5cm !important;
+			margin: 43px 11px 6px 4px;
+			font-weight: bolder;
+			font-size: 10px;
+			text-align: center;
+			background: #FFF;
+
+			qr canvas
+			{
+				width: 3cm !important;
+				height: 3cm !important;
+				display: block;
+				margin: 50px auto 2px auto;
+			}
+		}
+	}
+
+	#card-deacon .card-minister-top
+	{
+		.card-minister-middle-background-name { color:#3C30CD; }
+	}
+
+	#card-minister .card-minister-top
+	{
+		.card-minister-middle-background-name { color:#D6361F; }
+	}
+
+	.card-minister-middle-background
+	{
+		width: 10.2cm !important;
+		height: 7cm !important;
+		padding: 1em;
+		background: rgba( white, .8 );
+		font-size: 16px;
+		font-weight: bolder;
+		text-align: center;
+
+		div
+		{
+			margin-bottom: .7em;
+		}
+
+		.card-minister-middle-ass
+		{
+			width: 47% !important;
+			padding: 0 .5em;
+			margin: 10px 0;
+
+			&.pastor
+			{
+				background-image: url('/www/images/pastor.png');
+				background-size: 95px;
+				background-repeat: no-repeat;
+				background-position: center 7px;
+			}
+
+			&.secretary
+			{
+				background-image: url('/www/images/secretario.png');
+				background-size: 50px;
+				background-repeat: no-repeat;
+				background-position: center 9px;
+			}
+
+			div
+			{
+				margin-top: 30px;
+				padding-top: 1px;
+				border-top: 1px solid #333;
+				color: #333;
+				font-size: 10px;
+				text-align: center;
+			}
+		}
+
+		.card-minister-middle-background-name
+		{
+			min-height: 45px;
+			text-align: center;
+			font-size: 22px;
+		}
+
+		.card-minister-middle-background-credential
+		{
+			text-align: center;
+			font-size: 19px;
+		}
+
+		.card-minister-middle-background-date
+		{
+			margin-top: 15px;
+			text-align: center;
+		}
+	}

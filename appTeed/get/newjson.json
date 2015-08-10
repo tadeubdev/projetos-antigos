@@ -1,0 +1,98 @@
+{
+    "cod" : 1,
+
+    "titulo" : "Website by Teed",
+
+    "criador" : {
+        "nome" : "Tadeu Barbosa",
+        "apelido" : "tadeub00",
+        "imagem" : "tadeu.jpg"
+    },
+
+    "contato" : {
+
+        "telefones" : [
+            "(31) 927132835",
+            "(31) 927132835"
+        ],
+
+        "email" : [
+            "tadeubarbosa@live.com",
+            "tadeufbarbosa@gmail.com"
+        ],
+
+        "endereco" : [
+            {
+                "pais" : "Brasil",
+                "estado" : "Minas Gerais",
+                "cidade" : "Caete",
+                "numero" : "389",
+                "tipo" : "Casa",
+                "complemento" : "Casa",
+                "rua" : "Catita",
+                "apartamento" : "101",
+                "bloco" : "10"
+            }
+        ]
+    },
+
+    "categoria" : "design",
+
+    "datas" : [
+        {
+            "criacao" : "12/12/2012 22:33",
+            "modificacao" : null
+        }
+    ],
+    
+    "preco" : {
+        
+        "valor_reais" : 20,
+        
+        "valor_centavos" : 80,
+        
+        "prazo" : {
+            "ate" : 6,
+
+            "vezes_sem_juros" : 3,
+
+            "porcentagem_aumento_com_juros" : 10
+        }
+    },
+
+    "descricao" : "Criacao de websites completos ...",
+
+    "tags" : [
+        "teed",
+        "teste",
+        "maker"
+    ],
+
+    "imagens" : [
+        {
+            "link" : "carro.jpg",
+            "descricao" : "Parte frontal do carro"
+        },
+
+        {
+            "link" : "carro_lateral.jpg",
+            "descricao" : "Parte lateral do carro"
+        }
+    ],
+
+    "votos": [
+        {
+            "positivos" : [
+                1,
+                3,
+                4
+            ],
+
+            "negativos" : [
+                5
+            ]
+        }
+    ],
+
+    "visualizacoes" : 120
+}

@@ -1,0 +1,9 @@
+RewriteEngine on
+
+ErrorDocument 404 /lh-suplementos/404.php
+
+RewriteRule ^produto/([a-zA-Z0-9_-]+).html$ produto.php?produto=$1
+RewriteRule ^categoria/([a-zA-Z0-9_-]+) categoria.php?categoria=$1
+
+RewriteRule ^page/([0-9]+)$ ?Page_id=$1
+RewriteRule ^page index.php

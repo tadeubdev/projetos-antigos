@@ -1,0 +1,54 @@
+{
+
+	"name": "tadeubarbosa/teed-php",
+
+	"authors":
+	[
+		{
+			"name": "Tadeu Barbosa",
+			"email": "tadeufbarbosa@gmail.com"
+		}
+	],
+
+	"autoload":
+	{
+
+		"psr-4":
+		{
+
+			"":"src/"
+
+		},
+
+		"classmap":
+		[
+
+			"src/library/",
+
+			"src/controller/",
+
+			"src/service/"
+
+		],
+
+		"files":
+		[
+			"src/config/database.php",
+			"src/config/start.php"
+		]
+
+	},
+
+	"require":
+	{
+
+		"php-activerecord/php-activerecord":"dev-master",
+
+		"tadeubarbosa/teed-php-frame": "dev-master",
+
+		"symfony/var-dumper": "^3.0@dev"
+
+	},
+
+    "minimum-stability": "dev"
+}

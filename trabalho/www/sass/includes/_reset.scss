@@ -1,0 +1,168 @@
+
+	*
+	{
+		box-sizing: border-box;
+		outline: none;
+
+		font-family: Montserat;
+	}
+
+	html, body
+	{
+		margin: 0;
+		color: #444;
+	}
+
+	ul
+	{
+		padding: 0;
+		list-style: none;
+	}
+
+	a
+	{
+		text-decoration: none;
+		color: $color;
+
+		&:hover { color:darken( $color, 10% ); }
+	}
+
+	input
+	{
+		border: 1px solid #CCC;
+		border-radius: 4px;
+		padding: 10px 13px;
+
+		&:focus
+		{
+			box-shadow: 0 0 2px #3AEFC7;
+		}
+	}
+
+	button, .btn
+	{
+		padding: 10px 20px;
+		display: inline-block;
+		cursor: pointer;
+		border-radius: 4px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		font-size: 12px;
+		color: #EEE;
+		text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+		font-weight: bold;
+		text-decoration: none;
+
+		@include button( #495267, #606c88, #3f4c6b, #363d4c, #4b546a, #2c354b );
+
+		&.btn-success
+		{
+			@include button( #34740e, #4ba614, #008c00, #224b09, #36780f, #005900 );
+		}
+
+		&.btn-warning
+		{
+			@include button( #cb9b14, #eab92d, #c79810, #a17b10, #cf9f15, #98740c );
+		}
+
+		&.btn-danger
+		{
+			@include button( #72021c, #a90329, #6d0019, #450111, #77021d, #3a000d );
+		}
+
+		&.btn-info
+		{
+			@include button( #25729a, #3093c7, #1c5a85, #1c5675, #26759e, #133d5b );
+		}
+	}
+
+	/**/
+
+	.content
+	{
+		width: 100%;
+	}
+
+	.container
+	{
+		width: 970px;
+		margin: 0 auto;
+	}
+
+	.clearfix:after
+	{
+		clear: both;
+		height: 0;
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		content: ' ';
+	}
+
+	/***/
+
+	.collum-1,.collum-2,.collum-3,.collum-4,.collum-5,.collum-6,.collum-7,.collum-8,.collum-9,.collum-10,.collum-11,.collum-12
+	{
+		float: left;
+		margin: 2px;
+	}
+
+	.collum-1
+	{
+		width: 7%;
+	}
+
+	.collum-2
+	{
+		width: 16%;
+	}
+
+	.collum-3
+	{
+		width: 24%;
+	}
+
+	.collum-4
+	{
+		width: 32%;
+	}
+
+	.collum-5
+	{
+		width: 40%;
+	}
+
+	.collum-6
+	{
+		width: 49%;
+	}
+
+	.collum-7
+	{
+		width: 57%;
+	}
+
+	.collum-8
+	{
+		width: 65%;
+	}
+
+	.collum-9
+	{
+		width: 73%;
+	}
+
+	.collum-10
+	{
+		width: 82%;
+	}
+
+	.collum-11
+	{
+		width: 90%;
+	}
+
+	.collum-12
+	{
+		width: 99%;
+	}

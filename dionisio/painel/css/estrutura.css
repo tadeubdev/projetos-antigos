@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+html,body{
+    height: 100%;
+}
+
+.clear:after {
+    content:".";
+    display:block;
+    clear:both;
+    visibility:hidden;
+    height:0;
+    overflow:hidden;
+}
+
+#template{
+    width: 960px;
+    margin: 20px auto;
+    border: 1px solid #CCC;
+    padding: 10px;
+    background: #EEE;
+    border-radius: 7px;
+}
+
+#template-topo{
+    /*    */
+}
+
+#template-topo-logo{
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    font-size: 60px;
+    color: #CCC;
+    background: rgba(255,255,255, .6);
+    border: 1px solid #CCC;
+    border-radius: 7px;
+}
+
+#template-topo-menu{
+    margin: 10px 0;
+    background: rgba(255,255,255, .6);
+    border: 1px solid #CCC;
+    border-radius: 7px;
+}
+
+#template-topo-menu a{
+    float: left;
+    margin: 5px;
+    font-size: 14px;
+	padding: 4px 10px;
+	text-decoration: none;
+}
+
+#template-conteudo{
+    margin-top: 5px;
+    min-height: 100%;
+    background: rgba(255,255,255, .6);
+    border: 1px solid #CCC;
+    border-radius: 7px;
+    padding: 7px;
+	
+    -webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+
+
+#template-rodape{
+    height: 150px;
+    margin-top: 5px;
+    background: rgba(255,255,255, .6);
+    border: 1px solid #CCC;
+    border-radius: 7px;
+    padding: 7px;
+	
+    -webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
+}

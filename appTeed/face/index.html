@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="js/latest.js"></script>
+    <script type="text/javascript" src="get.js"></script>
+</head>
+<body>
+    
+<style>
+
+    *{
+        font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    }
+
+    body{
+        background: #EEE;
+        padding: 30px;
+    }
+</style>
+
+<ul></ul>
+
+<script>
+$(function(){
+    
+    $.getJSON('https://graph.facebook.com/tadeub00', function(data){
+        
+        $('<li/>').html(data.name).appendTo('ul');
+        
+        $('<li/>').html("<img src='https://graph.facebook.com/tadeub00/picture'>").appendTo('ul');
+        
+    });
+    
+});
+</script>

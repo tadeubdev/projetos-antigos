@@ -1,0 +1,97 @@
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    background: #EEE;
+}
+
+.clear:after {
+    content:".";
+    display:block;
+    clear:both;
+    visibility:hidden;
+    height:0;
+    overflow:hidden;
+}
+
+.box-sizing{
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#template-novo{
+    width: 100%;
+    min-height: 100%;
+    background: #FFF;
+}
+
+#template-novo-centro{
+    width: 920px;
+    min-height: 100%;
+    position: absolute;
+    left: 0; right: 0;
+    margin: auto;
+    background: #EEE;
+    border: solid #CCC;
+    border-width: 0 1px 0 1px;
+}
+
+#template-novo-centro-menu{
+    width: 100%;
+    height: 30px;
+    background: #3d3d3d;
+    position: relative;
+}
+
+#template-novo-centro-menu a{
+    min-width: 80px;
+    line-height: 30px;
+    display: block;
+    float: left;
+    padding: 0 5px;
+    margin-right: 5px;
+    background: #333;
+    color: #888;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#template-novo-centro-menu a:hover{
+    background: #111;
+}
+
+#template-novo-centro-menu-adc{
+    margin-left: 5px;
+    padding: 4px;
+}
+
+#template-novo-centro-menu-adc input{
+    width: 100px;
+    border: 0;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+#template-novo-centro-menu-outros{
+    width: 140px;
+    display: none;
+    position: absolute;
+    right: 210px;
+    top: 30px;
+}
+
+#template-novo-centro-menu-outros a{
+    clear: both;
+    width: 100%;
+    background: #444;
+}

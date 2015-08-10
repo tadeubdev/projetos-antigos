@@ -1,0 +1,66 @@
+<script type="text/javascript" src="js/latest.js"></script>
+
+<script>
+    $(function(){
+        
+        
+        (function( $ ){
+            $.fn.extend({
+                menu : function(classe, acao){
+                    if(!acao){acao='mouseover'}
+
+                    this.live(acao,function(){
+                        var $this = $(this), todos = $this.parent().children('li');
+                        todos.removeClass(classe);
+                        $this.addClass(classe);
+                    });
+                },
+                irmaos : function(dados, acao){
+                    if(!acao){acao='mouseover'}
+
+                    var pai = $((dados.split(' '))[0]),
+                    tipo_filho = (dados.split(' '))[1],
+                    filho = pai.children(tipo_filho),
+                    irmaos = pai.children(tipo_filho);
+
+                    irmaos.hide();
+                    filho.eq(0).show();
+
+                    this.live(acao,function(){
+                        var $this = $(this),
+                        index = $this.index();
+
+                        irmaos.hide();
+                        filho.eq(index).show();
+                    });
+                }
+
+            });
+
+        })( jQuery );
+        
+        
+        $('#menu li').menu('sel');
+        $('#menu li').irmaos('#conteiner li');
+        
+        
+    });
+</script>
+
+<style>
+    .sel{
+        color: red;
+    }
+</style>
+
+<ul id="menu">
+    <li> menu 1 </li>
+    <li> menu 2 </li>
+    <li> menu 3 </li>
+</ul>
+
+<ul id="conteiner">
+    <li> conteiner 1 </li>
+    <li> conteiner 2 </li>
+    <li> conteiner 3 </li>
+</ul>

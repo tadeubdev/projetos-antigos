@@ -1,0 +1,11 @@
+RewriteEngine on
+
+ErrorDocument 404 /dionisio/404.php
+
+RewriteRule ^page/([0-9]+)$ ?Page_id=$1
+
+RewriteRule ^item/([a-zA-Z0-9_-]+).html$ item.php?item=$1
+
+RewriteRule ^user/([a-zA-Z0-9_-]+)$ user.php?user=$1
+
+RewriteRule ^denunciar/([a-zA-Z0-9_-]+)$ denunciar.php?denunciar=$1

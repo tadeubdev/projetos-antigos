@@ -1,0 +1,28 @@
+
+	@font-face {
+		font-family: CODE;
+		src: url(CODE-Ligth.otf);
+	}
+
+	@font-face {
+		font-family: code;
+		src: url(CODE-Bold.otf);
+		font-weight: bold;
+	}
+
+	html, body
+	{
+		width: 100%;
+		margin: 0;
+		background: #2ecc71;
+	}
+
+
+	iframe {
+		display: block;
+		border: none;
+		border: none;
+		height: 200px;
+		width: 200px;
+		margin: 30px auto;
+	}

@@ -1,0 +1,484 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+body,html{
+    height:100%;
+}
+
+body{
+    background-color: #DDD;
+    background-image: url('../img/fundo.jpg');
+}
+
+.clear:after {
+    content:".";
+    display:block;
+    clear:both;
+    visibility:hidden;
+    height:0;
+    overflow:hidden;
+}
+
+a{
+    color: #638400;
+    text-decoration: none;
+}
+
+input[type=text], input[type=password]{
+    padding: 5px 10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.button{
+    cursor: pointer;
+    float: left;
+    margin: 0 3px;
+}
+
+#template{
+    width: 900px;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+#template-logo{
+    width: 200px;
+    height: 92px;
+    padding: 15px;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*/////////////// HOME //////////////////////*/
+.box{
+    float: left;
+    
+    width: 430px;
+    background: rgba(255,255,255, .6);
+    border: 1px solid #999;
+    margin: 10px;
+    box-shadow: 0 10px 20px -5px #000;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#template-login_cadastro input{
+    width: 407px;
+    height: 35px;
+    margin: 4px 10px;
+    border: 1px solid #CCC;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+    
+}
+
+#template-login_cadastro button{
+    float: left;
+    width: 120px;
+    height: 35px;
+    margin: 5px;
+    cursor: pointer;
+    
+    border: 1px solid #CCC;
+    background: #EEE;
+    color: #888;
+    box-shadow: inset 0 0 20px #DDD;
+    
+}
+
+#template-ultimos_usuarios{
+    background-image: url('../img/ultimos.jpg');
+    background-repeat: no-repeat;
+    background-position: 180px center;
+}
+
+.template-ultimos_usuarios-img{
+    border: 1px solid #777;
+    background-color: #FFF;
+    background-size: cover;
+    box-shadow: 0 10px 20px -5px #000;
+}
+
+.template-ultimos_usuarios-img:nth-child(1){
+    width: 80px;
+    height: 80px;
+    
+    -webkit-transform:rotate(-7deg);
+        -moz-transform:rotate(-7deg);
+            -ms-transform:rotate(-7deg);
+                -o-transform:rotate(-7deg);
+                    transform:rotate(-7deg);
+}
+
+.template-ultimos_usuarios-img:nth-child(2){
+    width: 100px;
+    height: 100px;
+    
+    -webkit-transform:rotate(7deg);
+        -moz-transform:rotate(7deg);
+            -ms-transform:rotate(7deg);
+                -o-transform:rotate(7deg);
+                    transform:rotate(7deg);	
+}
+
+.template-ultimos_usuarios-img:nth-child(3){
+    width: 120px;
+    height: 120px;
+
+    -webkit-transform:rotate(-7deg);
+        -moz-transform:rotate(-7deg);
+            -ms-transform:rotate(-7deg);
+                -o-transform:rotate(-7deg);
+                    transform:rotate(-7deg);		
+}
+
+.template-ultimos_usuarios-img:nth-child(4){
+    width: 140px;
+    height: 140px;
+
+    -webkit-transform:rotate(10deg);
+        -moz-transform:rotate(10deg);
+            -ms-transform:rotate(10deg);
+                -o-transform:rotate(10deg);
+                    transform:rotate(10deg);
+}
+
+#template-login_cadastro{
+    background-image: url('../img/memeLogin.jpg');
+    background-repeat: no-repeat;
+    background-position: 30px 230px;
+    position: relative;
+}
+
+#template-login_cadastro-menu{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    background: #EEE;
+    border-bottom: 1px solid #CCC;
+}
+
+#template-login_cadastro-menu a{
+    float: left;
+    width: 140px;
+    line-height: 50px;
+    text-align: center;
+    background: #EEE;
+    color: #999;
+    border-right: 1px solid #CCC;
+}
+
+#template-login_cadastro-menu a.template-login_cadastro-menu-sel,
+#template-login_cadastro-menu a:hover{
+    background: #DDD;
+    color: #777;
+}
+
+#template-login_cadastro-login-botoes, #template-login_cadastro-cadastro-botoes{
+    margin: 10px;
+}
+
+#template-login_cadastro-cadastro{
+    display: none;
+}
+
+.template-login_cadastro-resultados{
+    display: none;
+    width: 100%;
+    min-height: 15px;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    background-color: #DDD;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    border-top: 1px solid #CCC;
+}
+/*/////////////// HOME //////////////////////*/
+
+#template-menu{
+    width: 100%;
+    height: 50px;
+    background: #EEE;
+    border-bottom: 1px solid #CCC;
+    box-shadow: inset 0 0 40px #CCC;
+}
+
+#template-menu a{
+    display: block;
+    float: left;
+    width: 120px;
+    line-height: 50px;
+    text-align: center;
+    border-right: 1px solid #CCC;
+    color: #CCC;
+    font-size: 15px;
+}
+
+#template-menu a:hover{
+    background: #DDD;
+    color: #999;
+    box-shadow: inset 0 0 40px #CCC;
+}
+
+
+#template-conteudo{
+    width: 100%;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#template-conteudo-centro{
+    float: left;
+    width: 590px;
+    min-height: 500px;
+    border-right: 1px dotted #CCC;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#template-conteudo-centro-new{
+    width: 100%;
+    border-bottom: 1px dotted #CCC;
+    background: #EEE;
+    position: relative;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#template-conteudo-centro-new-centro{
+    float: left;
+    width: 340px;
+    min-height: 150px;
+    border-right: 1px solid #DDD;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#template-conteudo-centro-new-centro-menu{
+    width: 340px;
+    height: 30px;
+    border-bottom: 1px solid #DDD;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#template-conteudo-centro-new-centro-menu a{
+    display: block;
+    float: left;
+    width: 100px;
+    line-height: 30px;
+    font-size: 13px;
+    text-align: center;
+    color: #CCC;
+    border-right: 1px solid #CCC;
+}
+
+#template-conteudo-centro-new-centro-menu a:hover,
+#template-conteudo-centro-new-centro-menu a.template-conteudo-centro-new-centro-menu-sel{
+    background: rgba(0,0,0, .05);
+    color: #999;
+}
+
+#template-conteudo-centro-new-centro-cont li{
+    display: none;
+}
+
+#template-conteudo-centro-new-centro-cont li:first-child{
+    display: block;
+}
+
+#template-conteudo-centro-new textarea{
+    width: 340px;
+    height: 117px;
+    max-height: 270px;
+    resize: vertical;
+    border: 0;
+    border-right: 1px solid #DDD;
+    padding: 10px;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#template-conteudo-centro-new textarea:focus{
+    outline: none;
+}
+
+#template-conteudo-centro-new-lat{
+    float: left;
+    width: 247px;
+    height: 148px;
+    position: relative;
+    background: red;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#template-conteudo-centro-new-lat-topo{
+    width: 100%;
+    height: 64px;
+}
+
+.template-conteudo-centro-new-lat-setas{
+    width: 25px;
+    height: 64px;
+    float: left;
+    cursor: pointer;
+    font-size: 50px;
+    color: #CCC;
+    background: #DDD;
+}
+
+.template-conteudo-centro-new-lat-setas:nth-child(3){
+    float: right;
+}
+
+#template-conteudo-centro-new-lat ul{
+    float: left;
+    background: #FFF;
+    width: 197px;
+    height: 64px;
+    overflow: hidden;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#template-conteudo-centro-new-lat li{
+    display: none;
+    margin: 3px 15px;
+}
+
+#template-conteudo-centro-new-lat li:first-child{
+    display: block;
+}
+
+#template-conteudo-centro-new-lat-memes{
+    clear: both;
+    width: 100%;
+    height: 30px;
+    background: green;
+}
+
+#template-conteudo-centro-new-lat button{
+    width: 240px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left:0; right:0;
+    margin: 5px;
+    cursor: pointer;
+    
+    border: 1px solid #CCC;
+    background: #EEE;
+    color: #888;
+    box-shadow: inset 0 0 20px #DDD;
+    
+}
+
+#template-conteudo-centro-postagens{
+    font-size: 13px;
+    color: #777;
+}
+
+.template-conteudo-centro-postagens{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border-bottom: 1px solid #DDD;
+    background: #ECECEC;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.template-conteudo-centro-postagens-img{
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin: 5px 3px;
+    border: 1px solid #CCC;
+    background-color: rgba(0,0,0, .03);
+    background-image: url('../img/memeLogin.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 10px 10px -10px #000;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.template-conteudo-centro-postagens-cont{
+    float: left;
+    width: 485px;
+    min-height: 70px;
+    margin: 5px 2px;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.template-conteudo-centro-postagens-cont a{
+    display: block;
+    border-bottom: 1px solid #0066cc;
+    color: #0066cc;
+}
+
+.template-conteudo-centro-postagens-cont div{
+    padding: 5px;
+}
+
+.template-conteudo-centro-postagens-footer{
+    clear: both;
+    width: 560px;
+    min-height: 40px;
+    margin: 0 auto;
+    border-top: 1px dotted #999;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#template-conteudo-lateral{
+    float: left;
+    width: 300px;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+            box-sizing: border-box;
+}

@@ -1,0 +1,39 @@
+
+	#body
+	{
+		@extend .clearfix;
+		padding: 1em 0 5em 0;
+
+		.container
+		{
+			margin: 0 auto;
+
+			.page
+			{
+				@extend .clearfix;
+
+				.page-left
+				{
+					@extend .collum-3;
+
+					min-height: 10em;
+					padding-right: 1em;
+				}
+
+				.page-right
+				{
+					@extend .collum-9;
+
+					border-left: 1px dotted #CCC;
+					padding-left: 1em;
+
+					.page-right-menu
+					{
+						a { margin: 0 .5em .5em 0; }
+					}
+				}
+			}
+
+		}
+
+	}

@@ -1,0 +1,216 @@
+/* 
+Document   : estrutura
+Created on : 04/12/2012, 19:33:57
+Author     : Tadeu
+Description:
+Purpose of the stylesheet follows.
+*/
+
+
+*
+{
+    padding:0;
+    margin:0;
+    list-style:none;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+html,body
+{
+    height:100%;
+}
+
+body
+{
+    font-size:100%;
+}
+
+#corpo
+{
+    height:93%;
+    box-shadow:inset 0 0 200px #033;
+
+}
+
+#rodape
+{
+    height:6.7%;
+    background:#2D2D2D;
+    border-top:2px solid #000;
+    box-shadow:inset 20px 20px 50px #222;
+}
+
+#iniciar
+{
+    background:url('../inicar.png') no-repeat center;
+    background-size:80%;
+    width:5%;
+    height:6%;
+    cursor:pointer;
+    position:fixed;
+    margin-top:3px;
+}
+
+#menu
+{
+    display:none;
+    width:30%;
+    height:91.5%;
+    position:fixed;
+    background:#FFF;
+    border-right:3px solid #333;
+    padding:5px;
+    overflow:auto;
+}
+
+
+
+.recebe
+{
+    width:70px;
+    height:70px;
+    cursor:pointer;
+    padding:10px;
+}
+
+.imgIcone
+{
+    width:50px;
+    height:50px;
+}
+
+.nome
+{
+    color:#FFF;
+    font-size:10px;
+    width:50px;
+    text-align:center;
+}
+
+#config
+{
+    background:url(../config.png);
+    background-size:100%;
+}
+
+#design
+{
+    background:url(../design.png);
+    background-size:100%;
+}
+
+.recebe
+{
+    position:fixed;
+}
+
+.menuIcone
+{
+    display:none;
+    min-width:130px;
+    position:fixed;
+    background:#FFF;
+    margin:-50px 70px;
+    border-radius:2px;
+    padding:3px;
+    border:1px solid #555;
+    font-size:12px;
+}
+
+#menuIcone1
+{
+    margin:10px 80px;
+}
+
+#menuIcone2
+{
+    margin:100px 70px;
+}
+
+.Painel
+{
+    cursor:pointer;
+}
+
+.painelSegundo
+{	
+    display:none;
+    min-width:130px;
+    position:fixed;
+    background:#FFF;
+    margin:-50px 70px;
+    border-radius:2px;
+    padding:3px;
+    border:1px solid #555;
+    font-size:12px;
+}
+
+#backgroundPainelPainel
+{
+    margin:-20px 135px;
+}
+
+.linksPainel
+{
+    padding-bottom:2px;
+    border-bottom:1px solid #CCC;
+    margin:2px;
+    cursor:pointer;
+}
+
+#perfil
+{
+    position:fixed;
+    float:right;
+    margin-left:70%;
+    margin-top:5%;
+    background:#FFF;
+    border-radius:5px;
+    border:1px solid #444;
+    font-size:13px;
+    width:20%;
+    padding:5px;
+    box-shadow:10px 10px 60px #000;
+}
+
+#imgPerfil
+{
+    width:50px;
+    height:50px;
+    background:url(../user.jpg) no-repeat;
+    background-size:COVER;
+}
+
+.iconeRodape
+{
+    width:7.5%;
+    height:98%;
+    float:left;
+    margin-left:5px;
+}
+
+#recebeCenter
+{
+    display:none;
+    width:97%;
+    height:88%;
+    background:#FFF;
+    border-radius:2px;
+    border:2px solid #333;
+    position:fixed;
+    margin-top:-99%;
+    padding:10px;
+    margin-left:3px;
+}
+
+.boxes
+{
+    display:none;
+}
+
+#closeRecebeCenter
+{
+    float: right;
+    cursor:pointer;
+    color:#C00;
+}

@@ -1,0 +1,104 @@
+@charset UTF-8;
+*{list-style:none;font-family:tahoma;margin:0;padding:0}
+body{background:#FFF}
+a{text-decoration:none}
+.clear:after{content:".";display:block;clear:both;visibility:hidden;height:0;overflow:hidden}
+.box-sizing{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}
+#template{width:945px;min-height:100%; margin:0 auto}
+#template-topo{width:945px;display:block;background:#FFF;border:1px solid #CCC;margin:0 auto}
+#template-topo-logo{width:397px;height:87px;background-size:contain;background-repeat:no-repeat;background-position:center;background-image:url(../img/logo.jpg);margin:20px}
+#template-topo-menu{width:945px;height:40px;background:#69916B;margin:0 auto}
+#template-topo-menu a, #template-topo-menu span:first-child{display:block;float:left;min-width:100px;line-height:40px;font-size:10px;text-transform:uppercase;cursor:pointer;text-align:center;border-right:#465947 dotted 1px;color:#465947;padding:0 10px}
+#template-topo-menu div{z-index:9999999999999;position:relative; float:left;}
+#template-topo-menu span:last-child{position:absolute;clear:both;display:block;margin-top:40px;}
+#template-topo-menu div:hover a{display:block;text-align:left; background:#CCC;}
+#template-topo-menu div a{display:none;clear:both;float:none;width:200px;background:#69916B; border:1px solid rgba(0,0,0, .2); border-top:0;}
+#template-topo-menu a:hover, #template-topo-menu span:hover{box-shadow:inset 0 0 40px rgba(0,0,0,.2)}
+#template-menu-principal{width:945px;height:40px;top:0;left:0;z-index:10000;background:#69916B;border-bottom:1px solid rgba(0,0,0,.01);margin:0 auto}
+#template-menu-principal-topo{width:945px;height:100%;position:relative;margin:0 auto}
+#template-menu-principal-topo-busca{position:absolute}
+#template-menu-principal-topo-busca input{float:left;width:200px;height:35px;font-size:14px;border:0;background:#FFF;color:#555;padding-left:10px;border-right:1px dotted #CCC;margin:2.5px 0 2.5px 4px}
+#template-menu-principal-topo-busca input:focus{outline:none}
+#template-menu-principal-topo-busca button{float:left;width:35px;height:35px;cursor:pointer;border:0;background-color:#FFF;background-image:url(../img/lupa.png);background-size:20px;background-position:center;background-repeat:no-repeat;color:#999;margin:2.5px 2.5px 2.5px 0}
+#template-menu-principal-topo-busca-botao:hover{box-shadow:inset 0 0 30px #777}
+#template-menu-principal-topo-carrinho{border-left:4px solid #444;float:right;width:180px;height:31px;line-height:30px;position:relative;z-index:2;color:#999;font-size:12px;background-color:#4F4F4F;background-image:url(../img/carrinho.png);background-repeat:no-repeat;background-position:150px;padding:5px 5px 5px 25px}
+#template-menu-principal-topo-carrinho:hover{color:#CCC}
+#template-menu-principal-topo-carrinho h3{display:inline;font-weight:700;color:#FFF}
+#template-menu-principal-topo-itens{width:260px;position:absolute;right:0;top:40px;z-index:10000;display:none;background:#4F4F4F;border-radius:0 0 0 10px;padding:10px 10px 10px 7px}
+#template-menu-principal-topo-itens-ul{max-height:200px;overflow:auto}
+#template-menu-principal-topo-itens-ul::-webkit-scrollbar{width:10px;height:5px;background:#3A3A3A}
+#template-menu-principal-topo-itens-ul::-webkit-scrollbar-thumb:vertical{height:5px;background-color:#CCC}
+#template-menu-principal-topo-itens-ul::-webkit-scrollbar-thumb:horizontal{width:5px;background-color:#CCC}
+#template-menu-principal-topo-itens-total{width:100%;height:30px;line-height:30px;background:#7C7C7C;text-align:center;font-size:13px;color:rgba(0,0,0,.4)}
+#template-menu-principal-topo-itens-esvaziar{width:100%;height:30px;cursor:pointer;line-height:30px;text-align:center;font-size:13px;background:#3f4c6b;color:rgba(255,255,255,.5)}
+#template-menu-principal-topo-itens-finalizar{width:100%;height:30px;line-height:30px;display:block;border:0;font-size:12px;text-align:center;border-radius:0 0 0 10px;background:#ccff32;color:rgba(0,0,0,.4)}
+#template-menu-principal-topo-itens-vazio{text-align:center;font-size:13px;color:#CCC}
+.menu-principal-topo-itens-ul-li{background-color:#e2e2e2;background-size:40px;background-repeat:no-repeat;background-position:3px 4px;min-height:50px;padding-top:5px;border-bottom:1px dotted #CCC}
+.menu-principal-topo-itens-ul-li:hover{background-color:#DDD}
+.menu-principal-topo-itens-ul-li span{display:block;padding-left:50px}
+.menu-principal-topo-itens-ul-li span a{color:#777;font-size:12px;font-weight:700}
+.menu-principal-topo-itens-ul-li span:nth-child(2){display:block;padding-left:50px;font-size:14px;color:#211e1e;font-family:arial;font-weight:700;font-style:italic}
+.menu-principal-topo-itens-ul-li span span{display:inline;font-size:14px;color:#000;font-family:arial;padding-left:3px;font-weight:700;font-style:italic}
+#slide{width:919px;height:300px;background-color:#3D3D3D;background-image:url(../img/loading.gif);background-size:30px;background-repeat:no-repeat;background-position:center;box-shadow:inset 0 0 40px rgba(0,0,0,.2);border-bottom:10px solid #444;margin:0 auto}
+#slide li{display:none;width:100%;height:100%;background-size:cover;background-repeat:no-repeat;background-position:center}
+#template-conteudo{width:919px;min-height:800px;padding-bottom:20px;border:solid #CCC;border-width:0 1px;margin:0 auto}
+#template-conteudo-centro{float:left;width:665px;border-right:1px solid #CCC}
+.template-conteudo-centro{position:relative;float:left;width:214px;min-height:370px;border:2px solid #DDD;font-size:14px;background:#DDD;margin:5px 0 0 5px}
+.template-conteudo-centro:hover{border-color:#CCC}
+.template-conteudo-centro-adicionado{display:none;position:absolute;top:0;right:0;width:43px;height:43px;background-image:url(http://localhost/lh-suplementos/img/adicionado.png)}
+.template-conteudo-centro-img{width:100%;height:230px;background-size:cover}
+.template-conteudo-centro-nome{display:block;font-weight:700;color:#333;padding:10px 10px 0}
+.template-conteudo-centro-nome:hover{color:#444;text-decoration:underline}
+.template-conteudo-centro-precoAntigo{display:block;color:#777;padding:10px 10px 0}
+.template-conteudo-centro-preco{display:block;font-size:20px;color:#555;padding:0 10px 0 20px}
+.template-conteudo-centro-adicionar{display:block;font-size:17px;font-weight:700;color:#093;text-align:center;padding:10px 0}
+#template-conteudo-menu{width:100%;height:25px;background:#DDD}
+#template-conteudo-menu a{line-height:25px;display:block;float:left;text-align:center;font-size:13px;color:#888;border-right:1px solid #CCC;padding:0 10px}
+#template-conteudo-menu a:first-child{width:15px;height:25px;background-image:url(http://localhost/lh-suplementos/img/home.png);background-repeat:no-repeat;background-position:10px 5px}
+#template-conteudo-menu a:hover{background-color:#CCC}
+#template-conteudo-menu span{min-width:50px;line-height:25px;display:block;float:left;text-align:center;font-size:13px;color:#235C27;border-right:1px solid #CCC;padding:0 10px}
+#template-conteudo-centro-paginacao{width:669px;clear:both;display:block;margin:50px 10px}
+#template-conteudo-centro-paginacao a{float:left;width:30px;line-height:30px;text-align:center;font-size:13px;background:#CCC;color:#777;margin:10px 2px}
+#template-conteudo-centro-paginacao span{float:left;width:30px;line-height:30px;text-align:center;font-size:13px;background:#DDD;color:#999;margin:10px 2px}
+#template-conteudo-centro-paginacao a:hover{background:#999;color:#555}
+#template-conteudo-lateral{float:left;width:245px}
+#template-rodape{display:block;width:919px;min-height:150px;border:1px solid #CCC;border-top:5px solid #DDD;margin:0 auto}
+#template-rodape li{float:left;width:20%;min-height:200px;border-right:1px dotted #CCC;padding:10px 0 10px 10px}
+#template-rodape li span,#template-rodape li a{display:block}
+#template-rodape li span{font-size:20px;text-transform:lowercase;color:#999;padding:7px 7px 7px 0}
+#template-rodape li a{font-size:13px;color:#545;border-left:5px solid #777;padding:6px 6px 6px 10px}
+#template-rodape li:hover span{color:#5da52d}
+#template-rodape li a:hover{background:#d3dfca;color:#7f996a;border-color:#3f5230}
+#template-rodape div{clear:both;text-align:center;font-size:13px;color:#888;padding:30px}
+#template-rodape div a{color:#6a9349}
+#template-rodape div a:hover{color:#3f5230}
+::-webkit-placeholder,:-moz-placeholder,::-moz-placeholder,:-ms-placeholder{color:#555}
+.menu-principal-topo-itens-ul-li span a:hover,.template-conteudo-centro-adicionar:hover{text-decoration:underline}
+#template-rodape li:last-child{border:0}
+
+#busca-sem-produtos{text-align:center;font-size:50px;color:#CCC;text-shadow:0 -1px 1px #999, -1px 0 1px #999;padding:70px 30px}
+#busca-sem-produtos span{display:block;text-transform:capitalize;font-size:60px;font-weight:bolder;color:#999;text-shadow:0 -1px 1px #555, -1px 0 1px #555}
+
+#tabela-car{color:#444;border:solid #CCC;border-width:1px 0}
+#tabela-car-imagem{float:left;width:40%;padding:20px}
+#tabela-car-imagem-principal{width:100%;height:300px;border:1px solid #888;background-size:cover;background-repeat:no-repeat}
+#tabela-car-imagem-outras{width:100%;height:100px}
+#tabela-car-imagem-outras div{float:left;width:85px;height:85px;cursor:pointer;background-color:#DDD;background-size:cover;background-repeat:no-repeat;border:1px solid #CCC;margin:5px 5px 0 0}
+#tabela-car-imagem-outras div:first-child{border-color:red}
+#tabela-car-painel{float:right;width:60%;min-height:500px;border-left:1px dotted #CCC}
+#tabela-car-nome{font-size:30px;font-weight:700;color:#5f6c54;border-bottom:1px dotted #999;padding:40px 10px}
+#tabela-car-valor{background:#d8e0d1;color:#8b9e7c;font-size:20px;font-family:arial #000;border-bottom:1px dotted #999;padding:10px}
+#tabela-car-descricao{font-size:14px;color:#777;padding:20px}
+#tabela-car-descricao span{font-weight:700}
+#tabela-car-sabores,#tabela-car-tamanhos{font-size:14px;color:#222;padding:4px 20px}
+#tabela-car-sabores span,#tabela-car-tamanhos span{display:block;float:left;cursor:pointer;background:#b8cda7;color:#5e8c38;border-right:1px dotted rgba(0,0,0,.3);margin:2px 0;padding:5px 10px}
+.tabela-car-sel{background:#6a9349!important;color:#304123!important}
+#tabela-car-sabores-selecionado,#tabela-car-tamanhos-selecionado{border-color:rgba(255,0,0,.8)}
+#tabela-car-finalizar{width:236px;height:68px;display:block;cursor:pointer;border:0;background-image:url(http://localhost/lh-suplementos/img/sprite.png);background-position:0 -262px;margin:20px auto}
+#template-car-menu{width:100%;margin-top:20px;}
+#template-car-menu-links{float:left;width:100%;height:40px;background:#CCC;}
+#template-car-menu-links a{display:block;float:left;line-height:40px;min-width:100px;text-align:center;font-size:13px;border-right:1px dotted rgba(0,0,0, .3);color:#333;padding:0 10px}
+#template-car-menu-links a.template-car-menu-links{background:#8dad72;color:#344328;border-color:#344328}
+#template-car-menu-painel{float:left;width:100%;background:#EEE;}
+.template-car-menu-painel{display:none;min-height:300px;padding:10px}
+.template-car-menu-painel:first-child{display:block}

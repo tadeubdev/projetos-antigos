@@ -1,0 +1,28 @@
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.class.js"></script>
+
+
+<script>
+    
+    function echo(val){
+        document.writeln(val + '<br/>-----------------------<br/>');
+    }
+    
+    $.Class.extend('jogo',{
+        count: 0
+    },{
+        init: function( nome ) {
+            this.Class.count++;
+            
+            this.nome = nome;
+            this.id = this.Class.count;
+        },
+        
+        personagem : {}
+    });
+    
+    var mario = new jogo('Super Mario');
+    
+    console.log( mario );
+    
+</script>

@@ -1,0 +1,44 @@
+
+	@mixin mobile
+	{
+		@media only screen and (max-width: 400px) { @content }
+	}
+
+	@mixin tablet
+	{
+		@media only screen and (min-width: 400px) and (max-width: 700px) { @content }
+	}
+
+	@mixin laptop
+	{
+		@media only screen and (min-width: 700px) and (max-width: 1200px) { @content }
+	}
+
+	@mixin desktop
+	{
+		@media only screen and (min-width: 1200px) { @content }
+	}
+
+	@mixin button( $cor )
+	{
+
+		border: 1px solid $cor;
+		&, i { color:$cor!important; }
+
+		&:hover
+		{
+			&, i
+			{
+				color: lighten( $cor, 17% )!important;
+				border-color: lighten( $cor, 17% )!important;
+			}
+		}
+	}
+
+	@mixin keyframes($name)
+	{
+		@-webkit-keyframes #{$name} { @content; }
+		@-moz-keyframes #{$name} { @content; }
+		@-ms-keyframes #{$name} { @content; }
+		@keyframes #{$name} { @content; }
+	}

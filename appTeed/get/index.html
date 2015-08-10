@@ -1,0 +1,196 @@
+<script type="text/javascript" src="js/latest.js"></script>
+
+<script>
+
+$.getJSON('newjson.json', function(data) {
+
+/////////////////////////////////////////////////////// NOME, IMAGEM
+    var criador = data.criador;
+    
+    $('#titulo').html(data.titulo);
+    $('#criador_imagem').css({'background-image':'url(user/' + criador.imagem + ')'});
+    $('<a></a>').attr({'href': "user/" + criador.apelido}).text(criador.nome).appendTo('#criador_nome');
+///////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////
+    var preco = data.preco;
+    
+    var preco_prod = (preco.valor_reais + preco.valor_centavos / 100).toFixed(2);
+    
+    var prazo = preco.prazo;
+    
+    var parcelas = prazo.ate;
+    
+    var vezes_sem_juros = parseInt(prazo.vezes_sem_juros);
+    
+    var porcentagem_aumento_com_juros = prazo.porcentagem_aumento_com_juros;
+            
+    var preco_de_juros = (porcentagem_aumento_com_juros / 100) * preco_prod;
+    
+    var prazo_details = "<div id='prazo'>Aumento de " + porcentagem_aumento_com_juros + "%\n\
+    &agrave; prazo, o equivalente a R$ " + (preco_de_juros).toFixed(2);
+    
+    $("<spam>R$ " + preco_prod + " &agrave; vista " + prazo_details + " </spam>").appendTo('#preco ul li:nth-child(1)');
+    
+    for(var index=1; index<=parcelas; index++){
+        
+        if(index == 1){
+            var vez = " vez ";
+        } else {
+            var vez = " vezes ";
+        }
+        
+        var new_preco_prod = preco_prod / index;
+        
+        if(index > vezes_sem_juros){
+            
+            var juros = " com juros ";
+            
+            new_preco_prod += (preco_de_juros / index);
+            
+            var alinhamento = "parcelas_right";
+            
+        } else {
+            
+            var juros = " sem juros ";
+            
+            var alinhamento = "parcelas_left";            
+        }
+        
+        $("<li>" + index + vez  + juros+ " de R$ " + (new_preco_prod).toFixed(2) +  "</li>").appendTo('#' + alinhamento);
+        
+    }
+    
+    $("#parcelas div li:nth-child(odd)").css({'background' : '#3D3D3D'});
+    
+    $("#parcelas div li:nth-child(even)").css({'background' : '#222'});
+    
+///////////////////////////////////////////////////////
+
+});
+
+</script>
+
+
+<div id="recebe">
+    <ul>
+        <li id="titulo"></li>
+        
+        <li id="preco">
+            <ul>
+                <li></li>
+                <li id="parcelas">
+                    
+                    <div id="parcelas_left" style="float: left;"></div>
+                    <div id="parcelas_right" style="float: left;"></div>
+                    
+                    <div style="clear: both;"></div>
+                </li>
+            </ul>
+        </li>
+        
+        <li id="criador_imagem"></li>
+        
+        <li id="criador_nome">
+            <a></a>
+        </li>
+    </ul>
+    
+    <div class="clear"></div>    
+</div>
+
+
+<style>
+    *{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+        color: #999;
+    }
+    
+    .clear{
+        clear: both;
+    }
+    
+    body{
+        padding: 20px;
+        background: #EEE;
+        box-shadow: inset 0 0 50px rgba(0, 0, 0, .2);
+    }
+    
+    #titulo{
+        font-size: 30px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, .2);
+        padding: 6px;
+        text-transform: capitalize;
+        text-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    }
+    
+    
+    #criador_nome a{
+        float: left;
+        padding: 10px 2px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #d71e1e;
+        font-weight: bold;
+    }
+    
+    #criador_nome a:hover{
+        text-decoration: underline;
+    }
+    
+    #criador_imagem{
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        float: left;
+    }
+    
+    #preco{
+        padding: 20px;
+        margin: 5px;
+        padding-left: 30px;
+        font-size: 30px;
+        font-weight: bolder;
+        background: rgba(255, 69, 0, .04);
+        color: rgba(215, 30, 30, .8);
+        border: 1px solid rgba(255, 69, 0, .05);
+        border-left-width: 10px;
+    }
+    
+    #preco ul li{
+        
+    }
+    
+    #preco spam{
+        color: rgba(215, 30, 30, .8);
+    }
+    
+    #preco sup{
+        font-size: 20px;
+        padding: 3px;
+        color: rgba(215, 50, 10, .5);
+    }
+    
+    #parcelas{
+        font-size: 13px;
+        padding: 20px;
+    }
+    
+    #prazo{
+        font-size:15px;
+        color: #333;
+    }
+    
+    #parcelas div li{
+        padding: 10px 20px;
+        color: #FFF;
+    }
+    
+</style>

@@ -1,0 +1,15 @@
+RewriteEngine on
+RewriteBase /
+
+#if for an existing directory or file
+RewriteCond %{SCRIPT_FILENAME} -d
+RewriteCond %{SCRIPT_FILENAME} -f
+#then do nothing
+RewriteRule . - [L]
+
+#if a sets
+RewriteRule ^([-a-zA-Z0-9]+)/?$ index.php?page=$1 [L,NC]
+
+
+# Muda o arquivo de erro 404
+ErrorDocument 404 /erro404.php

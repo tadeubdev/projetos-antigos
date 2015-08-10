@@ -1,0 +1,321 @@
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="jquery.class.js"></script>
+
+<style>
+    *{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: tahoma;
+    }
+    
+    body{
+        padding: 20px;
+    }
+    
+    input{
+        padding: 5px 10px;
+        border: 1px solid #CCC;
+        border-radius: 3px;
+    }
+    
+    input:focus{
+        outline: none;
+    }
+    
+    button{
+        padding: 5px 20px;
+        border: 1px solid #CCC;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    #msg{
+        float:right;
+        position: fixed;
+        right:0;
+        top:0;
+        min-width:330px;
+        height: 100%;
+        overflow: auto;
+        font-size: 12px;
+        background: #EEE;
+        color: #777;
+    }
+    
+    #msg li{
+        padding: 10px;
+        border-bottom: 1px dotted #999;
+    }
+</style>
+
+
+<div id="login">
+    Crie um novo jogador <br><br>
+    <input type="text" id="nome" placeholder="nome"/>  <button id="criar">Criar</button>
+</div>
+
+<div id="logado" style="display:none;">
+    
+    <h3 id="saudacao"> Ol&aacute; <span></span>! <a id="sair" href="javascript:void(0)">sair</a> </h3>
+    
+    <img id="comer" title="Comer !!" src="img/comida.png" width="80" style="cursor:pointer;"/> <br/>
+    
+    <span id="msg_comer" style="color:red;"></span>
+    
+    <table id="tabela-usuarios" width="300" border="1" style="border-color:#CCC; text-align:center; margin:10px;" cellspacing="0" cellpadding="10">
+        <tr bgcolor="#CCC">
+            <td> nome </td>
+            <td> tipo </td>
+            <td> poder </td>
+        </tr>
+    </table>
+    
+</div>
+
+<ul id="msg"></ul>
+
+<script>
+$(function(){
+    
+    $('#nome').live('keypress',function(e){
+        if(e.which==13){ $_login(); }        
+    });
+    
+    $('#criar').live('click',function(){
+        $_login();
+    });
+    
+    function $_login(){
+        var nome = $.trim( $('#nome').val() );
+        if(nome){
+            if(arr[nome]){
+                alert('Ja existe este usuario');
+            } else {
+                usuario = new Usuario(nome);
+                $('#login, #logado').toggle(200);
+                $('#nome').val('');
+                $('#saudacao span').html(nome);
+            }
+        } else {
+            alert('preencha o campo Nome');
+        }
+    }
+    
+    $('#sair').live('click',function(){
+        $('#login, #logado').toggle(200);
+    });
+    
+    
+    var comeu = tempo_comer = null;
+    
+    function $_comer(){
+        if(comeu>0){
+            comeu --;
+            $('#msg_comer').html('Aguarde ' +comeu+ ' segundos para comer novamente!');
+        } else {
+            clearInterval(tempo_comer);
+            $('#msg_comer').fadeOut(400,function(){ $(this).html('').show() });
+        }
+    }
+    
+    $('#comer').live('click',function(){
+        if(!comeu){
+            usuario.comer();
+            comeu = 30;
+            
+            $_comer();
+            
+            tempo_comer = setInterval(function(){
+                $_comer();
+            }, 1000);
+        } else {
+            $('#msg_comer').fadeOut(300).fadeIn(300);
+        }
+    });
+    
+});
+
+function echo(msg){
+    $('<li/>').html(msg).prependTo('#msg');
+}
+
+/**
+*  $('#tabela-'+nome).children('td').eq(tipo).html(valor);
+*/
+function $_tabela(nome, tipo, valor){
+    switch(tipo){
+        case 'nome':
+            tipo = 0;
+            break;
+        //////////
+        case 'tipo':
+            tipo = 1;
+            break;
+        //////////
+        case 'poder':
+            tipo = 2;
+            break;
+        //////////
+    }
+    $('#tabela-'+nome).children('td').eq(tipo).html(valor);
+}
+
+
+echo('Inicio do jogo! <a target="_blank" href="leiame.txt">Ver Manual</a>');
+
+
+var arr = {};
+
+$.Class('Usuario', {conta:0},{
+    
+    init: function( nome, poder, tipo ) {
+        
+        if(!poder){ poder = 100;}
+
+        if(!tipo){ tipo = 'usuario';}
+
+        this.num = Usuario.conta;
+        this.nome = nome;
+        this.poder = poder;
+        this.tipo = tipo;
+        
+        arr[nome] = {
+            'num' : Usuario.conta,
+            'poder' : poder,
+            'tipo' : tipo
+        };
+        
+        Usuario.conta++;
+        
+        echo('<strong>'+nome +'</strong>['+tipo+'] '+ ' entrou para o jogo .. Poder: '+this.poder);
+        
+        $('<tr/>')
+            .attr('id', 'tabela-'+this.nome)
+            .insertAfter('#tabela-usuarios tr:eq(0)');
+        
+        $('<td/>')
+            .html(this.nome)
+            .appendTo('#tabela-'+this.nome);
+            
+        $('<td/>')
+            .html(this.tipo)
+            .appendTo('#tabela-'+this.nome);
+            
+        $('<td/>')
+            .html(this.poder)
+            .appendTo('#tabela-'+this.nome);
+            
+    },
+    
+    atack : function(pessoa){
+        
+        if(this.tipo=='usuario'){
+            
+            echo(this.nome + ' tentou atacar '+pessoa.nome+', mas usarios nao podem atacar ... somente Nerds e Geeks');
+            
+        } else if(pessoa==this){
+            
+            echo(' voce nao pode atacar a vc mesmo');
+            
+        } else {
+            
+            if(pessoa.poder){
+                
+                if(this.poder){
+                    
+                    var $this = this;
+                    
+                    var newarr = {}, $this = this;
+                    
+                    this.poder = (this.poder>0 ? (this.poder-10) : 0);
+                    
+                    $.each(arr, function(i, v) {
+                        v.poder = (v.num==$this.num ? $this.poder : (v.poder>=50 ? (v.poder-=50) : 0));
+                        newarr[i] = {'num':v.num,'poder':v.poder,'tipo':v.tipo};
+                    });
+                    
+                    arr = newarr;
+                    
+                    echo( this.nome + '['+this.tipo+'] atacou ' 
+                        +pessoa.nome +'['+pessoa.tipo+']' 
+                        +this.lista()
+                        +(this.poder ? (' Seu poder: '+this.poder) : 'Seus poderes estao esgotados, se alimente !!')
+                    );
+                    
+                    pessoa.poder = pessoa.poder>=50 ? (pessoa.poder-=50) : 0;
+                    
+                } else {
+                    
+                    echo(' seus poderes estao esgotados, se alimente !!');
+                    
+                }
+                
+            } else {
+                
+                echo(' ' +pessoa.nome+ ' ja esta morto ... ;x');
+                
+            }
+            
+        }
+    },
+    
+    comer : function(){
+        this.poder += 100;
+        
+        arr[this.nome].poder = this.poder;
+        
+        echo('<strong>' + this.nome + '</strong> comeu ... Novo poder de <strong>'+this.nome+'</strong>: ' + this.poder);
+        
+        $_tabela(this.nome, 'poder', this.poder)
+    },
+    
+    ressuscitar : function(pessoa){
+        if(this.tipo!='geek'){
+            echo(' So os GEEEKs podem ressuscitar ...');
+        } else {
+            if(pessoa){
+                if(pessoa.poder==0){
+                    pessoa.poder += 100;
+                    arr[pessoa.nome].poder = pessoa.poder;
+                    echo(this.nome + '['+this.tipo+'] ressuscitou '+pessoa.nome+'  Novo poder de '+pessoa.nome+': ' + pessoa.poder);
+                } else {
+                    echo(' Hei! '+pessoa.nome + ' nao esta morto ...');
+                }
+            } else {
+                echo(' Voce deve colocar o nome do jogador!');
+            }
+        }
+    },
+    
+    lista : function(){
+        var $this = this, retorno = ' Usuarios >>';
+        
+        $.each(arr,function(i,v){
+           retorno += ' ' + (v.poder==0?'[morto] ' : '') +v.num+ ':' +i+ ', tipo:' +v.tipo+ ', poder:' +v.poder+ '';
+        });
+        
+        return retorno;
+    }
+});
+
+Usuario('Nerd',{
+    init : function(name){
+        this._super(name, 300, 'nerd');
+    }
+});
+
+Usuario('Geek', {
+    init : function(name){
+        this._super(name, 500, 'geek');
+    }
+});
+
+
+var tadeu = new Usuario('tadeu');
+
+var teed = new Nerd('teed');
+
+var teed2 = new Geek('teed2');
+
+</script>

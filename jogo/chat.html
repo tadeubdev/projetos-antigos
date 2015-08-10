@@ -1,0 +1,195 @@
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8"/>
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+    <script>
+    $(function(){
+
+        if(!String.prototype.sprintf){
+            String.prototype.sprintf = function() {
+                var args = arguments;
+                return this.replace(/{(\d+)}/g, function(match, number) { 
+                    return typeof args[number] != 'undefined'? args[number]: match;
+                });
+            };
+        }
+        
+        var chat = {
+            ids : [],
+            
+            novo : function(id, nome){
+                if(!this.ids[id]){ this.ids[id]= {'nome':$.trim(nome), 'msg':new Array()}; }
+            },
+            
+            atualiza : function(){
+                for(var x in chat.ids){
+                    var id = x,
+                    nome = chat.ids[id].nome;
+                    
+                    $('li[id="'+id+'"]').css('color','blue');
+                    
+                    if(!$('#msg-'+id).size() && id!='eu'){
+                        
+                        $('<div/>', {'class':'msg', 'id':'msg-'+id})
+                        .append(
+                            $('<div/>', {'class':'msg-nomes', 'html':nome})
+                        )
+                        .append( $('<ul/>') )
+                        .append(
+                            $('<input/>', {'placeholder':'Nova mensagem', 'type':'text'})
+                        )
+                        .appendTo('#msg');
+                        
+                    }
+                }
+            }
+        }
+        
+        chat.novo('eu', 'Tadeu');
+        chat.ids['eu'].id = 10;
+        
+        chat.atualiza();
+        
+        setInterval(function(){
+            chat.atualiza();
+        }, 2000);
+        
+        
+        $('li').click(function(){
+            chat.novo($(this).attr('id'), $(this).html());
+            chat.atualiza();
+        });
+        
+        $('.msg-nomes').live('click', function(){
+            var pai = $(this).parent();
+            
+            pai.children('input').toggle();
+            pai.children('ul').toggle();
+        });
+        
+        $('.msg input').live('keyup', function(e){
+            var $this = $(this),
+            pai = $this.parent(),
+            valor = $this.val(),
+            ul = pai.children('ul');
+            
+            if(valor && e.which==13){
+                ul.append(
+                    $('<li/>')
+                    .html(valor)
+                    .prepend(
+                        $('<span/>', {'html': chat.ids['eu'].nome+' diz:'})
+                    )
+                )
+                .animate({scrollTop: ul.get(0).scrollHeight}, 'fast');
+                
+                var id = pai.attr('id').replace('msg-',''),
+                nome = chat.ids[id].nome;
+                
+                if(!chat.ids['eu'].msg[id]){
+                    chat.ids['eu'].msg[id] = new Array();
+                    chat.ids['eu'].msg[id].nome = nome;
+                    chat.ids['eu'].msg[id].last = 0;
+                }
+                
+                chat.ids['eu'].msg[id].push(valor);
+                
+                $(this).val('');
+            }
+        });
+        
+        $('button').click(function(){
+            console.log(chat.ids);
+        });
+        
+    });
+    </script>
+    <style>
+    *{
+        font-family: verdana;
+        font-size: 12px;
+    }
+    
+    #contatos li{
+        cursor: pointer;
+    }
+    
+    #contatos li:hover{
+        color: red;
+    }
+    
+    #msg{
+        width: 98%;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .msg{
+        width: 260px;
+        margin: 0 5px;
+        float: right;
+        background: #FFF;
+        border: 1px solid #CCC;
+    }
+    
+    .msg-nomes{
+        padding-left: 10px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        background: #DDD;
+        color: #888;
+    }
+    
+    .msg ul{
+        width: 100%;
+        height: 260px;
+        overflow: auto;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .msg li{
+        list-style: none;
+        padding: 7px;
+        margin: 0;
+        background: #FFF;
+        border-bottom: 1px dotted #CCC;
+    }
+    
+    .msg li span{
+        display: block;
+        padding-bottom: 8px;
+        font-weight: bold;
+    }
+    
+    .msg input{
+        display: block;
+        width: 260px;
+        padding: 0 10px;
+        height: 30px;
+        border: 0;
+        border-top: 1px solid #CCC;
+    }
+    
+    .msg input:focus{
+        outline: none;
+    }
+    </style>
+</head>
+<body>
+    
+    <ul id="contatos">
+        <li id="1"> caio </li>
+        <li id="2"> teed </li>
+        <li id="3"> teste </li>
+    </ul>
+    
+    <div id="msg"></div>
+    
+    <button>ver</button>
+    
+</body>
+</html>

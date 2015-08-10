@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script>
+        
+        var eu = {
+            'id' : 1,
+            'nome' : 'tadeu',
+            'amigos' : {
+                2 : {'id':2, 'nome':'teed'},
+                3 : {'id':3, 'nome':'maker'}
+            }
+        };
+        
+        $(function(){
+          
+          $('button').live('click', function(){
+              $('#resultado script').html('');
+              $('#resultado script').html( $('textarea').val() );
+          });
+          
+        });
+      </script>
+  </head>
+  <body>
+      
+      <textarea style="width:50%; height:300px;">
+        alert(123);
+      </textarea>
+      
+      <br/>
+      
+      <button>Validar</button>
+      
+      <div id="resultado"><script></script></div>
+  </body>
+</html>

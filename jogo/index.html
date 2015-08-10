@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8"/>
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+    <script>
+    $(function(){
+
+        if(!String.prototype.sprintf){String.prototype.sprintf=function(){var c=arguments;return this.replace(/{(\d+)}/g,function(a,b){return typeof c[b]!='undefined'?c[b]:a})}}
+
+        var jogo = function(nome){
+            var _super = this;
+            
+            this.nome = nome;
+            this.id = this.nome.replace(/ /gi,'-');
+            
+            $('<ul/>', {'id':this.id}).appendTo('body');
+            
+            this.escreva = function(txt, cor){
+                cor = cor||'#EEE';
+                $('<li/>', {'html':txt}).css('background-color',cor).appendTo('ul[id="'+this.id+'"]');
+            };
+            
+            this.escreva(this.nome);
+            
+            this.personagem = function(){};
+            
+            this.create = {
+                personagem : function(nome){
+                    if(!_super[nome]){
+                        _super[nome] = new _super.personagem();
+                        _super[nome].nome = nome;
+                        _super[nome].poder = 500;
+                        _super[nome].id = nome.replace(/ /gi,'-');
+
+                        _super.escreva('O Personagem <strong>{0}</strong> foi criado!'.sprintf(nome));
+                    } else {
+                        _super.escreva('J&aacute; existe um personagem com o nome <strong>{0}</strong>!'.sprintf(nome), '#FAE1E1');
+                    }
+                }
+            }
+        }
+        
+        var need = new jogo('Need For Speed');
+        
+        //need.personagem.prototype.nova = function(){};
+        
+        need.create.personagem('tadeu');
+        
+        need.create.personagem('teed');
+        
+        need.create.personagem('teste');
+
+        need.personagem.prototype.atack = function( inimi ){
+            if( need[inimi] ){
+                inimi = need[inimi];
+
+                if(inimi!=this){
+
+                    this.poder += 20;
+                    inimi.poder -= 100;
+
+                    need.escreva( ('<strong>{0}</strong> atacou <strong>{1}</strong>...').sprintf(this.nome, inimi.nome) );
+
+                    need.escreva( ('Novo poder de <strong>{0}</strong>: {1}, novo poder de <strong>{2}</strong>: {3}').sprintf(this.nome, this.poder, inimi.nome, inimi.poder) );
+                    
+                } else {
+                    need.escreva('Você não pode atacar a si próprio!');
+                }
+
+            } else {
+                need.escreva('Jogador <strong>'+inimi+'</strong> não existe!');
+            }
+        };
+
+        need.tadeu.atack('teed');
+        need.tadeu.atack('teed');
+        need.tadeu.atack('teed');
+
+        need.teed.atack('tadeu');
+
+        function substitui(a,b,c){return c.replace(new RegExp(a,'gi'),b);}
+        String.prototype.substitui = function(a,b){return this.replace(new RegExp(a,'gi'),b);}
+
+    });
+    </script>
+    <style>
+    *{
+            list-style: none;
+            font-family: verdana;
+            font-size: 12px;
+    }
+
+    ul{
+            padding: 0;
+            margin: 10px;
+            border: 1px solid #CCC;
+    }
+
+    li{
+            padding: 10px;
+            border-bottom: 1px dotted #CCC;
+            background: #EEE;
+    }
+
+    li:first-child{
+            font-size: 18px;
+            background: #DDD !important;
+            color: #888;
+    }
+
+    li:last-child{
+            border: 0;
+    }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

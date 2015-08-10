@@ -1,0 +1,232 @@
+/* 
+    Document   : perfil
+    Created on : 04/02/2013, 02:19:36
+    Author     : Tadeu
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#template-topo-user{
+    padding: 52px 30px 25px 30px;
+    box-shadow: inset 0 0 80px rgba(0,0,0, .1);
+}
+
+#template-topo-user-foto{
+    float: left;
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+    border: 3px solid #555;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 30px #000;
+}
+
+#template-topo-user-foto div{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+    display: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    line-height: 120px;
+    text-align: center;
+    color: #FFF;
+    box-shadow: inset 0 0 200px #000;
+}
+
+#template-topo-user-nome{
+    float: left;
+    padding: 20px 20px 0 20px;
+    font-size: 40px;
+    color: #777;
+}
+
+#template-topo-user-nome span{
+    color: #CCC;
+}
+
+
+#template-topo-user-lista{
+    position: relative;
+    margin: 70px 130px 0 165px;
+    font-size: 13px;
+    color: #999;
+}
+
+#template-topo-user-lista div{
+    float: left;
+    min-width: 170px;
+    margin-left: 10px;
+}
+
+#template-topo-user-lista div{
+    list-style: circle !important;
+}
+
+#template-topo-user-lista div:nth-child(1) div:hover,#template-topo-user-lista div:nth-child(2) div:hover{
+    color: #555;
+}
+
+#template-topo-user-lista div:nth-child(3) div{
+    cursor: pointer;
+}
+
+.template-topo-user-lista-amizade-adc{
+    color: #009999;
+}
+
+.template-topo-user-lista-amizade-remover{
+    color: #cc0000;
+}
+
+#template-topo-user-lista-denunciar{
+    color: #9900ff;
+}
+
+#template-topo-user-lista-parentesco{
+    color: #3399ff;
+}
+
+#template-topo-user-lista-relacionamento{
+    color: #ff3300;
+}
+
+
+#template-perfil{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+    float: left;
+    width: 70%;
+    min-height: 500px;
+    box-shadow: inset 0 0 80px rgba(0,0,0, .04);
+}
+
+#template-perfil-menu{
+    width: 100%;
+}
+
+#template-perfil-menu div{
+    float: left;
+    width: 164px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    
+    transition: all 0.5s ease-out;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-delay: initial;
+    -moz-transition-duration: 0s;
+}
+
+
+#template-perfil-menu div:nth-child(odd){
+    background: #CCC;
+    color: #888;
+    box-shadow: inset 0 0 80px rgba(0,0,0, .2);
+}
+
+#template-perfil-menu div:nth-child(even){
+    background: #C5C5C5;
+    color: #CCC;
+    box-shadow: inset 0 0 80px rgba(0,0,0, .3);
+}
+
+
+
+
+#template-perfil-abas{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+    width: 100%;
+    margin: 40px 10px;
+}
+
+#template-perfil-abas div{
+    display: none;
+}
+
+#template-perfil-abas div:first-child{
+    display: block;
+}
+
+
+
+
+
+
+
+#template-menu-lateral{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+    float: left;
+    width: 30%;
+}
+
+.template-menu-lateral-box{
+    width: 240px;
+    height: 240px;
+    max-height: 240px;
+    margin: 20px auto;
+    border: 1px solid #CCC;
+    box-shadow: inset 0 0 80px rgba(0,0,0, .1), 0 0 10px rgba(0,0,0, .1);
+}
+
+.template-menu-lateral-box-titdivo{
+    padding: 10px;
+    background: #444;
+    color: #777;
+    font-weight: bold;
+    text-align: center;
+}
+
+.template-menu-lateral-box-conteudo{
+    max-height: 183px;
+    padding: 10px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#template-menu-lateral-amigos-busca{
+    width: 90%;
+    height: 15px;
+    margin: 0 auto;
+    border-radius: 0;
+    background: rgba(0,0,0, .05);
+    border: 0;
+    text-transform: lowercase;
+}
+
+#template-menu-lateral-amigos-box{
+    padding: 5px 3px;
+}
+
+#template-menu-lateral-amigos-box div{
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin: 1px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 20px #000;
+    cursor: pointer;
+}
+
+#template-menu-lateral-amigos-box-nada{
+    display: none;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 13px;
+}

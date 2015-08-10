@@ -1,0 +1,108 @@
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+
+@font-face{
+    font-family: "Sketch";
+    src: url("../Sketch_Block.ttf");
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    background: #9d2121;
+    box-shadow: inset 0 0 900px #000;
+}
+
+.clear:after {
+    content:".";
+    display:block;
+    clear:both;
+    visibility:hidden;
+    height:0;
+    overflow:hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #33cc00;
+}
+
+a:hover{
+    text-decoration: none;
+    color:#009900;
+}
+
+a:active{
+    color: #00cc99;
+}
+
+img{
+    border: none;
+}
+
+input[type=text], input[type=password],input[type=submit], button, textarea{
+    min-width: 100px;
+    padding: 5px 10px;
+    background: #EDEDED;
+    box-shadow: inset 0 0 10px rgba(0,0,0, .5);
+    border-radius: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus,input[type=submit]:focus, button:focus, textarea:focus{
+    outline: none;
+}
+
+textarea{
+    min-width: 400px;
+}
+
+#template{
+    width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+#template-logo{
+    float: left;
+    width: 267px;
+    height: 46px;
+    font-family: "Sketch";
+    font-size: 60px;
+    color: #f4dd1b;
+    
+    text-shadow: 10px 10px 20px #000;
+}
+
+#template-menu{
+    float: left;
+    padding: 20px 40px;
+}
+
+#template-menu a{
+    float: left;
+    padding: 0 10px;
+    border-right: 1px dotted #f4dd1b;
+    font-family: "Sketch";
+    font-size: 30px;
+    color: #f4dd1b;
+}
+
+#template-menu a:hover{
+    color: #FFF;
+    border-color: #FFF;
+}
+
+#template-anuncio{
+    width: 800px;
+    height: 200px;
+    margin: 20px auto;
+    border: 2px solid rgba(0,0,0, .8);
+    background: rgba(0,0,0, .5);
+    box-shadow: 0 20px 20px -10px #000, inset 0 0 100px rgba(0,0,0, .4);
+}

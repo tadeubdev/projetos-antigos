@@ -1,0 +1,40 @@
+
+	@import 'includes/helpers/_mixins';
+
+	body
+	{
+		padding-top: 20%;
+		background: #EB3D3D;
+		text-align: center;
+		color: #FFF;
+	}
+
+	h2, h3, h4
+	{
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	h2
+	{
+		font-size: 50px;
+		color: rgba( black, .4 );
+	}
+
+	h3
+	{
+		font-size: 30px;
+		color: rgba( black, .3 );
+	}
+
+	h4
+	{
+		margin-top: 20px;
+		font-size: 20px;
+		color: rgba( black, .4 );
+	}
+
+	a
+	{
+		color: rgba( white, .5 ) !important;
+	}

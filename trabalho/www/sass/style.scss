@@ -1,0 +1,62 @@
+
+	@import 'main';
+
+	#header
+	{
+		background-image: linear-gradient( to right, darken( $color, 10% ), $color );
+		border-bottom: 5px solid darken( $color, 10% );
+
+		.container
+		{
+			padding: 40px 0;
+
+			a
+			{
+				position: relative;
+				float: left;
+				display: block;
+				min-width: 70px;
+				padding: 10px;
+				margin-right: 5px;
+				border-radius: 4px;
+				text-align: center;
+				font-size: 13px;
+				color: #FFF;
+
+				&.active
+				{
+					background-image: linear-gradient( to right, rgba(0,0,0,.2), rgba(0,0,0,.12) );
+				}
+
+				&:hover
+				{
+					background-image: linear-gradient( to right, rgba(0,0,0,.3), rgba(0,0,0,.15) );
+				}
+			}
+		}
+	}
+
+	/***/
+
+	#body
+	{
+		padding:20px 0;
+	}
+
+	.container-center:first-child
+	{
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		display: none;
+		margin: auto;
+		top:0; bottom:0; left:0; right:0;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url('../images/loading.gif');
+	}
+
+	#container-center
+	{
+		min-height: 100%;
+	}

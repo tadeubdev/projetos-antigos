@@ -1,0 +1,57 @@
+*{padding:0;margin:0;list-style:none;font-family:tahoma;}
+body{background-image:url(../img/fundo.png);}
+.clear:after{content:".";height:0;clear:both;display:block;overflow:hidden;visibility:hidden;}
+.box-sizing{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+
+img,a{border:0;}
+input:focus,textarea:focus{outline: none;}
+a{text-decoration:none;color: #0FF;}
+a:hover{color: #09C;}
+
+#template{width:950px;margin:0 auto;}
+#template-topo{}
+#template-topo-logo{width:230px;margin:30px 40px;height:133px;background:url(../img/news/logo-cinza.png);background-size:contain;background-position:center;background-repeat:no-repeat;}
+
+#template-topo-menu{width:100%;height:50px;margin-top:30px;font-size:14px;background:#292929;}
+#template-topo-menu a{display:block;float:left;line-height:50px;min-width:80px;padding:0 10px;color:#777;text-align:center;border-right:1px dotted #444;}
+#template-topo-menu a:hover{background:#222;}
+
+#template-topo-user{width:50px;height:50px;background:#CCC;padding:1px;margin-top:-15px;border:1px solid #666;}
+
+#template-conteudo{width:100%;min-height:700px;margin:0 auto;margin-bottom:40px;background:#FFF;box-shadow:0 30px 15px -15px rgba(0,0,0,.5);}
+
+#template-conteudo-pag-inicial-esquerda{width:50%;float:left;height:700px;padding:10px;border-right:1px solid #EEE;}
+
+#template-conteudo-pag-inicial-esquerda h2,#template-conteudo-pag-inicial-direita h2{font-size:25px;margin:20px 0;color:#CCC;text-align:center;}
+#template-conteudo-pag-inicial-esquerda h2 strong{display:block;font-size:30px;color:#999;}
+
+#template-conteudo-pag-inicial-esquerda div{border:1px solid #DDD;width:400px;margin:20px auto;}
+#template-conteudo-pag-inicial-esquerda div span{display:block;background:#EEE;padding:10px;font-size:14px;color:#CCC;}
+#template-conteudo-pag-inicial-esquerda div div{width:20%;height:84px;margin:0;float:left;border:0;background-size:cover;background-repeat:no-repeat;background-color:#222;}
+#template-conteudo-pag-inicial-esquerda div h4{padding:15px;background:#FFF;font-size:18px;color:#999;text-align:center;}
+
+#template-conteudo-pag-inicial-esquerda-inputs{width:400px;margin:0 auto;border:1px solid #DDD;}
+#template-conteudo-pag-inicial-esquerda-inputs input{width:100%;height:40px;padding:0 10px;font-size:18px;color:#555;border:0;}
+#template-conteudo-pag-inicial-esquerda-inputs input:nth-child(2){border-top:1px solid #DDD;}
+
+#template-conteudo-pag-inicial-esquerda-inputs-buttons{width:100% !important;height:40px !important;background:red;border-top:1px solid #DDD !important;}
+#template-conteudo-pag-inicial-esquerda-inputs-buttons button{width:50%;height:100%;float:left;cursor:pointer;font-size:18px;color:#CCC;border:0;}
+#template-conteudo-pag-inicial-esquerda-inputs-buttons button:hover{color:#999;}
+#template-conteudo-pag-inicial-esquerda-inputs-buttons button:last-child{border-left:1px solid #DDD;}
+
+#template-conteudo-pag-inicial-direita{width:50%;float:left;padding-top:30px;}
+
+#template-conteudo-pag-inicial-direita-inputs{width:400px;margin:0 auto;border:1px solid #DDD;}
+#template-conteudo-pag-inicial-direita-inputs input{width:100%;height:40px;padding:0 10px;font-size:18px;color:#555;border:0;border-bottom:1px solid #DDD;}
+#template-conteudo-pag-inicial-direita-inputs input:last-child{border:0;}
+
+#template-conteudo-pag-inicial-direita-inputs-buttons{width:100% !important;height:40px !important;background:red;border-top:1px solid #DDD !important;}
+#template-conteudo-pag-inicial-direita-inputs-buttons button{width:50%;height:100%;float:left;cursor:pointer;font-size:18px;color:#CCC;border:0;}
+#template-conteudo-pag-inicial-direita-inputs-buttons button:hover{color:#999;}
+#template-conteudo-pag-inicial-direita-inputs-buttons button:last-child{border-left:1px solid #DDD;}
+
+#template-rodape{display:block;clear:both;height:50px;padding-left:30px;line-height:50px;font-size:13px;color:#444;background:#333;box-shadow:inset 0 80px 100px #222;}
+#template-rodape a{color: #555;}
+#template-rodape a:hover{text-decoration:underline;}
+
+

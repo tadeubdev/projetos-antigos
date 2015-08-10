@@ -1,0 +1,53 @@
+//////////// Manual  //////////////////
+//// Ola, para comecar a jogar digite:
+////             [seu-nome] = new Usuario("[seu-nome]");
+//// ou         [seu-nome] = new Nerd("[seu-nome]");
+//// ou ainda [seu-nome] = new Geek("[seu-nome]");
+////
+//// Nivel de poderes: Geek > Nerd > Usuario 
+////
+//// Os Usuarios so podem comer 
+//// Os Nerds comem e atacam os Usuarios 
+//// Os Geeks comem, atacam os Nerds e ressuscita os Usuarios! 
+
+//// Inicio do jogo !
+
+//// cria tres usuarios, um em cada classe ...
+caio = new Usuario('caio');
+teed = new Nerd('teed');
+tadeu = new Geek('tadeu');
+
+//// caio que pertence a classe Usuario tenta atacar teed que pertence aos Nerds
+//// e retornara um aviso, pois os Usuarios nao podem atacar, somente comer ...
+caio.atack(teed);
+
+//// caio agora come e seu podere aumenta +100 
+caio.comer();
+
+//// teed e tadeu tambem comem e seus poderes aumenta +100 
+teed.comer();
+tadeu.comer();
+
+//// teed ataca caio. o poder de caio agora diminui em -50, e o de teed -10 ..
+teed.atack(caio);
+
+//// tadeu ataca teed. o poder de teed agora diminui em -50, e o de tadeu -10 ..
+teed.atack(caio);
+
+//// tadeu tenta atacar caio, mas retorna uma mensagem, pois Geeks nao podem atacar Usuarios
+tadeu.atack(caio);
+
+//// se um usuario ou nerd tentar ressuscitar alguem exibira uma mensagem dizendo que so os Geeks podem ressuscitar
+caio.ressuscitar(tadeu);
+teed.ressuscitar(tadeu);
+
+//// se um Geek tentae ressuscitar alguem que nao esta morto ele exibe outra mensagem
+tadeu.ressuscitar(caio);
+
+//// agora o Nerd vai atacar 5 vezes o Usuario caio, enquanto caio estiver com poderes ele atingira, quando terminar os poderes exibira mensagem dizendo que caio ja esta morto ;x
+teed.atack(caio);
+
+//// se o Usuario ja estiver morto, um Geek podera ressuscita-lo
+tadeu.ressuscitar(caio);
+
+

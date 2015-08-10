@@ -1,0 +1,60 @@
+*{padding:0;margin:0;font-family:tahoma;list-style:none;}
+.clear:after{content:'.';height:0;clear:both;overflow:hidden;visibility:hidden;display:block;}
+.box-sizing{box-sizing:border-box;-ms-box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+
+html,body{height:100%;}
+
+body{background:#222;}
+
+#loadding{display:none; width:960px;height:600px;position:absolute;margin:auto;top:0;bottom:0;left:0;right:0;background:#FFF;}
+#loadding-logo{width:302px;margin:0 auto;margin-top:150px;text-align:center;font-size:100px;color:#DDD;}
+#loadding-logo span{color:#3ce3be;}
+
+#loadding-inputs{width:400px;margin:50px auto;border:1px solid #CCC;}
+#loadding-inputs input{width:100%;height:45px;outline:none;padding:0 10px;border:0;font-size:19px;color:#555;border-bottom:1px solid #CCC;}
+#loadding-inputs input:last-child{border:0;}
+
+#loadding-inputs button{width:100%;cursor:pointer;display:block;height:40px;outline:none;border:0;border-right:1px solid #CCC;background:#DDD;color:#777;font-size:14px;}
+
+
+
+#template{display:none; width:960px;height:600px;position:absolute;margin:auto;top:0;bottom:0;left:0;right:0;background-color:#DDD;background-size:cover;background-repeat:no-repeat;}
+
+#template-conteudo{height:550px;box-shadow:inset 0 0 600px rgba(0,0,0,.3);}
+
+#template-conteudo-painel{}
+.template-conteudo-painel{float:left;}
+.template-conteudo-painel-icone{width:100px;height:100px;position:relative;margin:5px 0px 5px 5px;cursor:pointer;background-color:rgba(0,0,0,.7);text-align:center;font-size:60px;text-transform:capitalize;color:rgba(255,255,255,.4);}
+.template-conteudo-painel-icone-nome{position:absolute;bottom:0;width:100%;min-height:10px;background:rgba(0,0,0,.2);padding:3px;font-size:13px;color:rgba(255,255,255,.3);text-align:center;}
+
+#template-conteudo-programas{display:none; width:100%;height:550px;position:absolute;top:0;background:#FFF;}
+#template-conteudo-programas-topo{height:30px;background:#444;}
+#template-conteudo-programas-topo-titulo{float:left; width:500px;line-height:30px;font-size:13px;color:#888;text-transform:capitalize;padding:0 15px;}
+#template-conteudo-programas-topo-links{float:right; height:100%;width:260px;}
+#template-conteudo-programas-topo-links span{float:right; display:block; min-width:60px;padding:0 5px;height:30px;line-height:30px;cursor:pointer;text-align:center;font-size:13px;color:#999;}
+#template-conteudo-programas-topo-links span:hover{color:#CCC}
+
+#template-conteudo-programas iframe{width:960px;height:520px;border:0;}
+
+#template-conteudo-menu{display:none; width:300px;height:550px;position:absolute;top:0;z-index:99999;background:rgba(255,255,255,.88);border-right:5px solid #222;}
+
+
+#template-rodape{height:50px;background:#444;background:rgba(0,0,0, .88);}
+
+#template-rodape-botao{float:left;width:50px;height:50px;line-height:50px;text-align:center;font-size:35px;color:rgba(255,255,255,.1);background:#333;cursor:pointer}
+
+#template-rodape-menu{float:left;width:810px;height:50px;border-right:3px solid rgba(0,0,0,.1);}
+#template-rodape-menu div{float:left;width:120px;overflow:hidden;height:50px;line-height:50px;text-transform:capitalize;font-size:13px;color:#888;cursor:pointer;text-align:center;padding:0 5px;border-right:1px solid rgba(0,0,0,.1);}
+#template-rodape-menu div:hover,#template-rodape-menu div.sel{background:#555;}
+#template-rodape-menu-outros{display:none; float:right !important;border-left:1px solid rgba(0,0,0,.1);}
+#template-rodape-menu-outros-painel{display:none; position:absolute;bottom:51px;right:90px;z-index:999 !important;height:300px !important;overflow:auto !important;width:210px !important;background:#333;border:5px solid #000 !important;border-bottom-width:0 !important;padding:0 !important;}
+#template-rodape-menu-outros-painel div{width:170px !important;border-bottom:1px solid rgba(0,0,0,.2);}
+#template-rodape-menu-outros:hover div{display:block;}
+
+#template-rodape-dados{float:left;width:100px;height:50px;line-height:50px;text-align:center;font-size:13px;color:#888;}
+#template-rodape-dados span{font-size:10px;padding-left:3px;}
+
+#template {}
+#template {}
+#template {}
+

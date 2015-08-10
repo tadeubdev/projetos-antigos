@@ -1,0 +1,23 @@
+{
+	"name": "tadeubarbosa/quiz-biblico",
+	"autoload":
+	{
+		"psr-4":
+		{
+			"": "src/"
+		},
+		"classmap":
+		[
+			"src/Brain/"
+		],
+		"files":
+		[
+			"src/controller/define.php",
+			"src/controller/start.php"
+		]
+	},
+	"require":
+	{
+		"symfony/var-dumper": "3.0.*@dev"
+	}
+}

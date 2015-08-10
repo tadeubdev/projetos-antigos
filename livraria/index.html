@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/estrutura.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            
+            function $_existe_livro(titulo){
+                return $('#livro-'+titulo).size();
+            }
+            
+            $('#cadastro').submit(function(e){
+                e.preventDefault();
+                
+                var titulo = $('input').eq(0),
+                    autor = $('input').eq(1),
+                    titulo_valor = $.trim( titulo.val() ),
+                    autor_valor  = $.trim( autor.val() ),
+                    erro = $('#cadastro-erro');
+                
+                if(!titulo_valor){
+                    titulo.focus();
+                    erro.show().html('Insira um Titulo!');
+                } else if(!autor_valor){
+                    autor.focus();
+                    erro.show().html('Insira um Autor!');
+                } else if($_existe_livro(titulo_valor+'-'+autor_valor)){
+                    titulo.focus();
+                    erro.show().html('Este livro ja existe!');
+                } else {
+                    $('<div/>', {'id':'livro-'+titulo_valor+'-'+autor_valor})
+                    .append(
+                        $('<span/>', {'html': titulo_valor})
+                    )
+                    .append(
+                        $('<span/>', {'html': autor_valor})
+                    )
+                    .prependTo('#livros');
+                    
+                    titulo.val('').focus();
+                    autor.val('');
+                    
+                    erro.hide().html('');
+                    
+                    var conta = $('#livros div').size();
+                    
+                    $('#cadastro-conta').html( conta==1 ? 'Um Livro' : (conta+" livros") );
+                    
+                }
+                
+            });
+            
+        });
+    </script>
+  </head>
+  <body>
+      
+      <div class="box-sizing clear" id="livraria">
+          <div class="box-sizing" id="livraria-titulo"> Livraria </div>
+          
+          <form class="box-sizing" action="" id="cadastro">
+              <div id="cadastro-titulo">Novo Livro</div>
+              
+              <div class="box-sizing" id="cadastro-inputs">
+                <input class="box-sizing" type="text" id="titulo" placeholder="titulo" />
+                <input class="box-sizing" type="text" id="autor" placeholder="autor" />
+              </div>
+              
+              <button id="cadastrar">Cadastrar</button>
+              
+              <div id="cadastro-erro"></div>
+              
+              <div id="cadastro-conta">Nenhum Livro</div>
+          </form>
+          
+          <div class="box-sizing clear" id="livros"></div>
+          
+      </div>
+      
+  </body>
+</html>

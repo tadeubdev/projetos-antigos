@@ -1,0 +1,31 @@
+*{padding:0;margin:0;list-style:none;font-family:tahoma;list-style:none;}
+html,body{height:100%;}
+.clear:after{content:".";height:0;clear:both;display:block;overflow:hidden;visibility:hidden;}
+.box-sizing{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+
+#home{width:940px;padding-top:170px;margin:0 auto;position:relative;}
+
+#home-box{height:30px;text-align:center;color:#DDD;position:absolute;right:50px;top:0;border:1px solid #DDD;border-top-width:0;background:#FFF;}
+#home-box a{min-width:70px;line-height:30px;display:block;float:left;font-size:13px;color:#555;padding:0 10px;border-right:1px solid #DDD;text-decoration:none;color:#3EAD95;}
+#home-box a:last-child{border:0;}
+#home-box a:hover{color:#555;}
+
+#home-logo{width:573px;margin:0 auto;height:108px;background-image:url('../img/logo.png');}
+#home-input{width:555px;margin:20px auto;height:60px;border:1px solid #CCC;border-radius:5px;}
+#home-input input{width:100%;height:100%;border-radius:5px;font-size:20px;color:#777;padding:0 10px;border:0;outline:none;}
+
+#home-menu{display:block;clear:both;width:100%;height:40px;margin-bottom:30px;border:dotted #CCC;border-width:0 1px 1px 1px;}
+#home-menu a{display:block;float:left;line-height:40px;text-align:center;min-width:70px;padding:0 7px;border-right:1px dotted #CCC;font-size:13px;text-decoration:none;color:#999;}
+#home-menu a:hover{color:#378C69;}
+
+#home.pesquisa{padding-top:0;background:#FFF;border-bottom:4px solid #DDD;}
+.pesquisa #home-logo{width:250px;height:70px;float:left;margin:0;background-size:200px;background-repeat:no-repeat;background-position:center;}
+.pesquisa #home-input{width:500px;height:40px;margin:17px;float:left;border-radius:0;font-size:12px;}
+.pesquisa #home-input-dicas{margin-top:1px;}
+
+#lista{width:940px;margin:0 auto;padding:10px;}
+#lista span{display:block;width:100%;padding:10px;border-bottom:1px solid #DDD;color:#444;font-size:13px;}
+#lista input{margin:15px 5px;}
+#lista a{color:#378C69;text-decoration:none;font-weight:bold;}
+
+#desconhecido{width:940px;margin:150px auto;text-align:center;font-size:45px;font-weight:bold;color:#CCC;}

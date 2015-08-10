@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div id="topo" data-theme="" data-role="header" data-position="fixed">
+                <h1 id="titulo">
+                    My website
+                </h1>
+                <div data-role="navbar" data-iconpos="right">
+                    <ul>
+                        <li>
+                            <a href="#page1" data-transition="flip" data-theme="" data-icon="home">
+                                Button
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="textinput1">
+                            Title
+                        </label>
+                        <input name="" id="textinput1" placeholder="teste" value="teste" type="month" />
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                        <legend>
+                            Choose:
+                        </legend>
+                        <input id="radio1" name="" value="" type="radio" />
+                        <label for="radio1">
+                            Option
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="slider1">
+                            Value:
+                        </label>
+                        <input type="range" name="slider" value="10" min="0" max="100" data-highlight="false" />
+                    </fieldset>
+                </div>
+            </div>
+            <div data-theme="a" data-role="footer">
+                <h3>
+                    Footer
+                </h3>
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
+</html>

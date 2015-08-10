@@ -1,0 +1,262 @@
+
+	html, body
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	body { background-color:#FFF; }
+
+	*
+	{
+		color: #333;
+		outline: none;
+		font-family: Montserrat, Geneva, Tahoma, Verdana, sans-serif;
+
+		@include box-sizing(border-box);
+
+		&:after, &:before { box-sizing: border-box; }
+	}
+
+	a
+	{
+		text-decoration: none;
+		color: $color;
+
+		&:hover { color: lighten( $color, 10% ); }
+	}
+
+	ul
+	{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li { padding: 0; }
+	}
+
+	h1,h2,h3,h4,h5
+	{
+		small
+		{
+			font-size: .7em;
+
+			&.clear { display: block; }
+		}
+	}
+
+	img { max-width: 100%; }
+
+	hr
+	{
+		border: 0;
+		display: block;
+		margin: 1em 0;
+		border-bottom: 1px dotted #CCC;
+	}
+
+	.mobile-padding
+	{
+
+		@include mobile { padding:.5em 1em; }
+	}
+
+	::-webkit-input-placeholder { color: #DDD; }
+
+	:-ms-input-placeholder { color: #DDD; }
+
+	/*****/
+
+	.mobile { @include desktop { display:none !important; }; }
+
+	.desktop
+	{
+		@include mobile { display:none !important; };
+		@include tablet { display:none !important; };
+	}
+
+	.color { color: $color; }
+
+	.no-margin { margin: 0 !important; }
+
+	.no-padding { padding: 0 !important; }
+
+	.text { font-family:tahoma; }
+
+	.clearfix:after
+	{
+		content: ' ';
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		clear: both;
+		height: 0;
+	}
+
+	/****/
+
+	select
+	{
+		width: 100%;
+		border: 1px solid #CCC;
+		border-radius: 3px;
+		padding: 9px;
+
+		&.select-small
+		{
+			padding: .5em;
+			font-size: 11px;
+		}
+	}
+
+	input
+	{
+		border: 1px solid #CCC;
+		border-radius: 3px;
+		padding: 9px;
+
+		&[type="date"].input-small
+		{
+			font-size:10.5px !important;
+		}
+
+
+		&[type="file"]
+		{
+			padding: 7.2px !important;
+		}
+
+		&.input-small
+		{
+			padding: .5em;
+			font-size: 12px;
+		}
+	}
+
+	label
+	{
+		display: block;
+		margin-bottom: 3px;
+		font-size: 11px;
+	}
+
+	.form
+	{
+		border: 1px solid #DDD;
+		border-radius: 4px;
+		padding: 1em;
+	}
+
+	.form-group
+	{
+		float: left;
+		padding: .1em .3em;
+	}
+
+	.input-group
+	{
+		padding: 0 .5em;
+		margin-bottom: 1em;
+
+		h1, h2, h3, h4, h5, legend
+		{
+			margin: 0;
+			margin-bottom: 5px;
+			padding-bottom: 5px;
+			border-bottom: 1px solid #DDD;
+		}
+
+		input
+		{
+			width: 100%;
+		}
+
+		button, .btn
+		{
+			margin: 0;
+			margin-right: 5px !important;
+		}
+	}
+
+	.btn
+	{
+		margin: 0 .3em;
+		padding: 10px 15px;
+		display: inline-block;
+		cursor: pointer;
+		background: rgba( white, .5 );
+		font-size: 12px;
+		text-decoration: none;
+
+		@include border-radius(3px);
+
+		&, *
+		{
+			color: #FFF;
+
+			&:hover { color:#FFF; }
+		}
+
+		@include button( #555 );
+
+		&.btn-small
+		{
+			padding: 5px 10px;
+			font-size: 11px;
+		}
+
+		&.btn-large
+		{
+			padding: 15px 20px;
+			font-size: 14px;
+		}
+
+		&.btn-success { @include button( #34740e ); }
+
+		&.btn-warning { @include button( #cb9b14 ); }
+
+		&.btn-danger { @include button( #A00326 ); }
+
+		&.btn-info { @include button( #25729a ); }
+	}
+
+	/****/
+
+	.collum
+	{
+		float: left;
+
+		@include mobile
+		{
+			width: 100% !important;
+			float: none;
+			padding: .5em 0;
+			display: block;
+		}
+	}
+
+	$collum: 100% / 12 ;
+
+	.collum-1 { @extend .collum; width: $collum - .2; }
+
+	.collum-2 { @extend .collum; width: $collum * 2 - .2; }
+
+	.collum-3 { @extend .collum; width: $collum * 3 - .2; }
+
+	.collum-4 { @extend .collum; width: $collum * 4 - .2; }
+
+	.collum-5 { @extend .collum; width: $collum * 5 - .2; }
+
+	.collum-6 { @extend .collum; width: $collum * 6 - .2; }
+
+	.collum-7 { @extend .collum; width: $collum * 7 - .2; }
+
+	.collum-8 { @extend .collum; width: $collum * 8 - .2; }
+
+	.collum-9 { @extend .collum; width: $collum * 9 - .2; }
+
+	.collum-10 { @extend .collum; width: $collum * 10 - .2; }
+
+	.collum-11 { @extend .collum; width: $collum * 11 - .2; }
+
+	.collum-12 { @extend .collum; width: $collum * 12 - .2; }

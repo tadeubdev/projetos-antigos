@@ -1,0 +1,27 @@
+<script>
+
+var humano = function(nome){
+    this.nome = nome;
+    this.poder = 100;
+    
+    console.log(this);
+    console.log('\n');
+    
+    this.atack = function(nome){
+        this.poder -= 10;
+        
+        nome.poder -= 50
+        
+        console.log(this);
+        console.log(nome);
+        console.log('\n\n');
+    };
+};
+
+var tadeu = new humano('Tadeu');
+
+var teed = new humano('Teed');
+
+tadeu.atack(teed);
+
+</script>

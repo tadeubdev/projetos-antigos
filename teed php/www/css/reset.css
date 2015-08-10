@@ -1,0 +1,50 @@
+* { box-sizing:border-box; outline:none; font-family:arial; color:#444; }
+
+html, body { margin:0; }
+
+ul { padding:0; list-style:none; }
+
+a { color:#a89a24; text-decoration:none; }
+
+input[type="text"] { padding:10px; border:1px solid #e3d524; border-radius:3px; }
+
+button { padding:10px 20px; cursor:pointer; border:1px solid #ded236; border-radius:3px; background:#faef62; color:#c6b31a; font-weight:bold; }
+
+button:hover { background:#f0e65c; color:#b5a41b; }
+
+/**/
+
+.content { width:100%; }
+
+.container { width:970px; margin:0 auto; }
+
+.clearfix:after { clear:both; height:0; display:block; overflow:hidden; visibility:hidden; content:' '; }
+
+/***/
+
+.collum-1,.collum-2,.collum-3,.collum-4,.collum-5,.collum-6,.collum-7,.collum-8,.collum-9,.collum-10,.collum-11,.collum-12 { float:left; margin:2px; }
+
+.collum-1 { width:7%; }
+
+.collum-2 { width:16%; }
+
+.collum-3 { width:24%; }
+
+.collum-4 { width:32%; }
+
+.collum-5 { width:40%; }
+
+.collum-6 { width:49%; }
+
+.collum-7 { width:57%; }
+
+.collum-8 { width:65%; }
+
+.collum-9 { width:73%; }
+
+.collum-10 { width:82%; }
+
+.collum-11 { width:90%; }
+
+.collum-12 { width:99%; }
+

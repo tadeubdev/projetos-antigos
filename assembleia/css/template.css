@@ -1,0 +1,198 @@
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: tahoma;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    
+}
+
+.clear:after{
+    content: ".";
+    height: 0;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+
+.box-sizing{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #777;
+    text-transform: capitalize;
+}
+
+a:hover{
+    color: #009999;
+}
+
+a:active{
+    color: #00cc99;
+}
+
+img{
+    border: none;
+}
+
+input[type=text], input[type=password],input[type=submit], button, textarea{
+    min-width: 100px;
+    padding: 5px 10px;
+    background: #EDEDED;
+    box-shadow: inset 0 0 10px rgba(0,0,0, .5);
+    border-radius: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus,input[type=submit]:focus, button:focus, textarea:focus{
+    outline: none;
+}
+
+textarea{
+    min-width: 400px;
+}
+
+
+
+/*
+*       ESTRUTURA DO TEMPLATE
+*/
+#template-menu{
+    width: 100%;
+    height: 58px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0 !important;
+    background: #EEE;
+    border-bottom: 2px solid #777;
+    z-index: 100;
+}
+
+#template-menu a{
+    float: left;
+    min-width: 90px;
+    padding: 0 20px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    border-right: 1px dotted rgba(0,0,0, .2);
+    border-bottom: 2px solid #777;
+    
+    transition: all 0.5s ease-in;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in;
+    -webkit-transition-delay: initial;
+}
+
+#template-menu a:hover,.template-menu-sel{
+    box-shadow: inset 0 0 30px rgba(0,0,0, .1);
+    text-decoration: none;
+    border-bottom: 2px solid #009999;
+    
+    transition: all 0.5s ease-out;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-delay: initial;
+}
+
+#template{
+    width: 945px;
+    min-height: 100%;
+    margin: 55px auto;
+    background: #DDD;
+}
+
+#template-topo{
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    font-size: 60px;
+    
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 140px #000;
+    
+    color: #FFF;
+    text-shadow: 0 0 10px #000, 0 -1px 1px #555, -1px 0 1px #555, 1px 0 1px #555, 0 1px 1px #555;
+}
+
+#template-topo-user{
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    box-shadow: inset 0 0 140px #000;
+    border-right: 5px solid #333;
+    background: #333 url('../img/tadeu.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#template-conteudo{
+    width: 100%;
+}
+
+#template-conteudo-central{
+    float: left;
+    width: 72%;
+    min-height: 500px;
+    padding: 10px;
+    border-right: 1px solid #DDD;
+    border-radius: 0 0 0 10px;
+}
+
+#template-conteudo-menu{
+    float: left;
+    width: 28%;
+    background: #E5E5E5;
+}
+
+#template-conteudo-menu li{
+    width: 100%;
+    
+    background: #FFF;
+    margin: 10px 0;
+    border: 1px solid #CCC;
+    border-width: 1px 0;
+}
+
+.template-conteudo-menu-titulo{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    
+    box-shadow: inset 0 0 100px rgba(0,0,0, .4);
+    color: #777;
+}
+
+.template-conteudo-menu-conteudo{
+    height: 200px;
+    max-height: 200px;
+    overflow: auto;
+    padding: 6px;
+    box-shadow: inset 0 0 250px rgba(0,0,0, .2);
+}
+
+
+
+#template-rodape{
+    text-align: center;
+    font-size: 11px;
+    padding: 20px 50px 50px 50px;
+    color: #888;
+}

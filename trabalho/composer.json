@@ -1,0 +1,41 @@
+{
+
+	"name": "tadeubarbosa/querotrabalhar",
+
+	"authors":
+	[
+
+		{
+			"name": "Tadeu Barbosa",
+			"email": "tadeufbarbosa@gmail.com"
+		}
+
+	],
+
+	"autoload":
+	{
+
+		"psr-4":
+		{
+			"":"src/"
+		},
+
+		"classmap":
+		[
+			"src/Brain/",
+			"src/Helper/",
+			"src/Traits/"
+		]
+
+	},
+
+	"require":
+	{
+
+		"php": ">=5.5.12",
+
+		"symfony/var-dumper": "3.0.*@dev"
+
+	}
+
+}

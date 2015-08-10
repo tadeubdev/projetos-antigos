@@ -1,0 +1,62 @@
+
+	.content
+	{
+		width: 100%;
+	}
+
+	.container
+	{
+		width: 970px;
+		margin: 0 auto;
+	}
+
+	#header .container
+	{
+		text-align: center;
+		small { color: #555; }
+	}
+
+	#sidebar
+	{
+		padding: 1em 0;
+		z-index: 9;
+		background: $background;
+
+		&.float
+		{
+			position: fixed;
+			top:0; left:0;
+			margin: 0 !important;
+		}
+
+		a
+		{
+			margin-right: 15px;
+			color: lighten( $background, 40% );
+
+			&:hover { color:#FFF; }
+		}
+	}
+
+	#sidebar-bread
+	{
+		padding: .6em 0;
+		background: #333;
+
+		a
+		{
+			display: inline-block;
+			font-size: 13px;
+			color: #CCC;
+
+			&:hover { color:#FFF; }
+
+			&:after
+			{
+				margin: 0 .7em 0 .5em;
+				content: '/';
+			}
+		}
+
+		span { color: #FFF !important; }
+	}

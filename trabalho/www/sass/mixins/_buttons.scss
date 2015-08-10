@@ -1,0 +1,28 @@
+
+	@mixin button( $cor1, $cor2, $cor3, $cor4, $cor5, $cor6 )
+	{
+		border:1px solid $cor1;
+		background-color: $cor2;
+		background-image: -webkit-gradient(linear, left top, left bottom, from($cor2), to($cor3));
+		background-image: -webkit-linear-gradient(top, $cor2, $cor3);
+		background-image: -moz-linear-gradient(top, $cor2, $cor3);
+		background-image: -ms-linear-gradient(top, $cor2, $cor3);
+		background-image: -o-linear-gradient(top, $cor2, $cor3);
+		background-image: linear-gradient(to bottom, $cor2, $cor3);
+		filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$cor2, endColorstr=$cor3);
+
+
+		&:hover
+		{
+			border:1px solid $cor4;
+			background-color: $cor5;
+			background-image: -webkit-gradient(linear, left top, left bottom, from($cor5), to($cor6));
+			background-image: -webkit-linear-gradient(top, $cor5, $cor6);
+			background-image: -moz-linear-gradient(top, $cor5, $cor6);
+			background-image: -ms-linear-gradient(top, $cor5, $cor6);
+			background-image: -o-linear-gradient(top, $cor5, $cor6);
+			background-image: linear-gradient(to bottom, $cor5, $cor6);
+			filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$cor5, endColorstr=$cor6);
+
+		}
+	}
